@@ -1,0 +1,35 @@
+{
+ "gap": "A_startup",
+ "seed": 2,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\": \"fixable\",\n \"chokepoint\": [{\"operator\": \"read database header/schema page (page 1) through async I/O layer\", \"component\": \"asynchronous I/O layer\", \"frozen\": true,\n                 \"why_every_version_executes_it\": \"Opening the DB and preparing any statement requires reading the header and sqlite_schema root through the frozen I/O layer\",\n                 \"least_work\": {\"amount\": 1, \"unit\": \"pages\", \"per_unit_cost_us\": 1, \"total_ms\": 0.001, \"calling_context\": \"single 4 KiB read from warm OS page cache, no WAL frames to replay\"},\n                 \"max_cores\": 1}],\n \"floor_ms\": 0.001,\n \"L_delta\": -8.0,\n \"rationale\": \"The only frozen work is about one page read, so the floor is microseconds, far below T_R_upper. The profile is dominated by mutable start-up costs: dynamic relocation and symbol lookup, eager crossbeam bounded-channel creation, and mimalloc and shell initialisation. Static linking or prelinking via build options, a smaller binary, and lazily created channels and I/O threads in the shell should plausibly bring start-up near SQLite's ~2.6 ms.\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1981,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1032,
+  "output_tokens_details": {
+   "thinking_tokens": 615
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 11.7
+}

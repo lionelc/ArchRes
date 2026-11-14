@@ -1,0 +1,28 @@
+{
+ "gap": "A_startup",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"SELECT 1 requires no database-page access, so mutable callers can defer database and asynchronous-I/O initialization. Relocation costs are affected by mutable build options. Channel-construction instruction counts establish neither unavoidable execution nor minimum elapsed cost. Thus no frozen-operator floor proves an architectural gap, and no measured setting or quantified change establishes a fix. Numeric zeros denote no certified floor, not an evaluated logarithmic bound.\"}",
+ "usage": {
+  "input_tokens": 1293,
+  "input_tokens_details": {
+   "cache_write_tokens": 1290,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1290
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 559,
+  "output_tokens_details": {
+   "reasoning_tokens": 447
+  },
+  "total_tokens": 1852
+ },
+ "finish": "completed",
+ "seconds": 14.8
+}

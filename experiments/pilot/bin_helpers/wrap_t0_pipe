@@ -1,0 +1,2 @@
+#!/bin/sh
+cat "${KO:-/dev/null}" "$2" | exec /work/pilot/bin/turso-0.5.0/tursodb -q -m list "${A_DB:-$1}.t0"

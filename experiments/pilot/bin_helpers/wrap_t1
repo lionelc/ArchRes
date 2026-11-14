@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /work/pilot/bin/turso-0.8.3/tursodb -q -m list "$1.t1" < "$2"

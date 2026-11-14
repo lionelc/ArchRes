@@ -1,0 +1,77 @@
+{
+ "written_utc": "2026-11-11T09:16:15Z",
+ "files": {
+  "C/Y1 rav1d HEAD": {
+   "path": "/work/pilot/rav1d/target/release/dav1d",
+   "sha256": "f18b842912ba7c3ea119c67df5e4adda774ee547726c53d8b9831638d9781cd2"
+  },
+  "C/R1 dav1d HEAD (lib)": {
+   "path": "/work/pilot/rav1d/build/src/libdav1d.so.7",
+   "sha256": "5784eb561d105357aec4653b1ff79a7a9f995d4df9ec19dcb2870e1c16c0fae8"
+  },
+  "C/R1 dav1d HEAD (cli)": {
+   "path": "/work/pilot/rav1d/build/tools/dav1d",
+   "sha256": "c8e96d6168f11e467c39a0c21cff08d9b07f90bfaafe40f1fb72d4bd0ff94588"
+  },
+  "C/Y0 rav1d v1.1.0": {
+   "path": "/work/pilot/wt_v110/target/release/dav1d",
+   "sha256": "a0bfce4bcb547a98967ca4ca06fc8f1cd42ade06c099fac9105b7d9f50e9c8d8"
+  },
+  "C/R0 dav1d 1.5.1 (cli)": {
+   "path": "/work/pilot/dav1d_151/build/tools/dav1d",
+   "sha256": "6655957fa74bce04106121aa3bb20029714009d6558c28d1dd791be1e2bbb723"
+  },
+  "C/P1400p": {
+   "path": "/work/pilot/wt_pr1400p/target/release/dav1d",
+   "sha256": "76ee9bf3eeeb8fe9e61dbd1f30d6709b834522e502656abe1f02c0875b05b9ec"
+  },
+  "C/P1400": {
+   "path": "/work/pilot/wt_pr1400/target/release/dav1d",
+   "sha256": "65795d5e5c704d89bc9fb2faba053527df6aa669586732ae2099b2367253dce7"
+  },
+  "B/Y1 uutils 0.12.0": {
+   "path": "/work/pilot/bin/uu-0.12.0/coreutils",
+   "sha256": "0fa6290974c4cbec0bb186a28c13d56681d59fe62d6f51092cb1676039a9a20b"
+  },
+  "B/Y0 uutils 0.2.0": {
+   "path": "/work/pilot/bin/uu-0.2.0/coreutils",
+   "sha256": "884e1bf46d95c155a8a9f187485127942983a162924141112d5785a77ad73b41"
+  },
+  "B/R gnu 9.12 cksum": {
+   "path": "/work/pilot/bin/gnu-9.12/bin/cksum",
+   "sha256": "e6646872cc6be42ca26ba8377b0815dc0f2b1c9a8ed0a696d7f0628e271f98d6"
+  },
+  "A/Y1 turso 0.8.3": {
+   "path": "/work/pilot/bin/turso-0.8.3/tursodb",
+   "sha256": "8125a4aa4bdf7deb316498e24d2610f1ac4ea084421273a7965bad9e91437841"
+  },
+  "A/Y0 turso 0.5.0": {
+   "path": "/work/pilot/bin/turso-0.5.0/tursodb",
+   "sha256": "333c5354f43b95850756c4920f1c24dc208c6959449b5d0bc0a53a0a25240d31"
+  },
+  "A/R sqlite 3.50.4": {
+   "path": "/work/pilot/bin/sqlite3-3.50.4",
+   "sha256": "485b7e0667f60c919337d470e60c5dbb94e4a6942bdd37a8d319625ed94b6282"
+  },
+  "video": {
+   "path": "/work/pilot/videos/Chimera-AV1-8bit-1280x720-3363kbps.ivf",
+   "sha256": "645beb8cf99616682a50baee58a26fc30881c599074070e59a03f09bffc2c590"
+  },
+  "plant": {
+   "path": "/work/pilot/bin/libplant.so",
+   "sha256": "334c957960a14a326ebef251b06eb417c848e1bd7086d5981fbfd3541db324eb"
+  },
+  "C/P1397p": {
+   "path": "/work/pilot/wt_pr1397p/target/release/dav1d",
+   "sha256": "4234c59801b8baf30818a6e37fb467adf3b6fef6f111b92c86f01fa0d5bda343"
+  },
+  "C/P1397": {
+   "path": "/work/pilot/wt_pr1397/target/release/dav1d",
+   "sha256": "b712d94befaf678e885a9560ac3a2358eefe37411f5f8ef49405313fba51243a"
+  },
+  "C/Y0 rav1d v1.1.0 meson C (not used)": {
+   "path": "/work/pilot/wt_v110/target/release/dav1d",
+   "sha256": "a0bfce4bcb547a98967ca4ca06fc8f1cd42ade06c099fac9105b7d9f50e9c8d8"
+  }
+ }
+}

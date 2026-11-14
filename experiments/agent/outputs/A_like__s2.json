@@ -1,0 +1,14 @@
+{
+ "gap": "A_like",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"exec_like\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite file format and SQL semantics are frozen, requiring the same query processing logic.\",\n      \"least_work\": {\n        \"amount\": 3800000000,\n        \"unit\": \"instructions\",\n        \"per_unit_cost_us\": 0.01,\n        \"total_ms\": 380,\n        \"calling_context\": \"Same query and data size as measured\"\n      },\n      \"max_cores\": 4\n    }\n  ],\n  \"floor_ms\": 380,\n  \"L_delta\": 0.54,\n  \"rationale\": \"The VDBE's `exec_like` function is frozen and dominates the execution time. Its least work is fixed by the architecture contract, making the gap architectural.\"\n}",
+ "usage": {
+  "completion_tokens": 215,
+  "prompt_tokens": 1432,
+  "total_tokens": 1647,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 68.9
+}

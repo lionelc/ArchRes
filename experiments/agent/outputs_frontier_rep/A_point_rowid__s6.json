@@ -1,0 +1,28 @@
+{
+ "gap": "A_point_rowid",
+ "seed": 6,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No frozen-work certificate is available; zeros denote no established floor. Admissible caching can eliminate repeated asynchronous reads, and no minimum compulsory-read cost is supplied. Parsing, allocation, copying, B-tree traversal, VM execution, and shell startup are mutable and cannot support the floor. The profiles suggest optimization opportunities but establish neither an architectural lower bound nor a specific change that would reach the approximately 23.57 ms target.\"}",
+ "usage": {
+  "input_tokens": 1328,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1325
+  },
+  "output_tokens": 451,
+  "output_tokens_details": {
+   "reasoning_tokens": 336
+  },
+  "total_tokens": 1779
+ },
+ "finish": "completed",
+ "seconds": 12.8
+}

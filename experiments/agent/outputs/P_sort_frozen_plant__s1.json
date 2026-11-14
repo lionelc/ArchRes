@@ -1,0 +1,14 @@
+{
+ "gap": "P_sort_frozen_plant",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"gapcr_plant\",\n      \"component\": \"preloaded constructor F\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Frozen by contract, runs once per invocation\",\n      \"least_work\": {\n        \"amount\": 84284,\n        \"unit\": \"microseconds\",\n        \"per_unit_cost_us\": 1,\n        \"total_ms\": 84.284,\n        \"calling_context\": \"LD_PRELOAD with GAPCR_PLANT_US=84284\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 84.284,\n  \"L_delta\": 0.95,\n  \"rationale\": \"The gapcr_plant operator is frozen and must execute, adding 84.284 ms. This exceeds the band b of 0.236 log units, making the gap architectural.\"\n}",
+ "usage": {
+  "completion_tokens": 223,
+  "prompt_tokens": 1011,
+  "total_tokens": 1234,
+  "prompt_tokens_details": {
+   "cached_tokens": 498
+  }
+ },
+ "seconds": 67.0
+}

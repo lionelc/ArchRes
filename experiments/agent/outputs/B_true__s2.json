@@ -1,0 +1,14 @@
+{
+ "gap": "B_true",
+ "seed": 2,
+ "text": "{\n  \"class\": \"fixable\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"The gap is fixable as the architecture contract allows changes to code, dependencies, and build settings. Optimizing Rust code, reducing binary size, or improving dispatch efficiency can reduce execution time.\"\n}",
+ "usage": {
+  "completion_tokens": 78,
+  "prompt_tokens": 766,
+  "total_tokens": 844,
+  "prompt_tokens_details": {
+   "cached_tokens": 634
+  }
+ },
+ "seconds": 20.9
+}

@@ -1,0 +1,14 @@
+{
+ "gap": "A_point_rowid",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite file format and SQL semantics are frozen, so the query plan must match SQLite's plan for the same query.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"row\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 0.1,\n        \"calling_context\": \"fixed rowid, fixed data\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"mi_heap_malloc_aligned_at\",\n      \"component\": \"asynchronous I/O layer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The asynchronous I/O layer is frozen, so memory allocation for I/O operations is fixed.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"allocation\",\n        \"per_unit_cost_us\": 500,\n        \"total_ms\": 0.5,\n        \"calling_context\": \"fixed data size\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 0.6,\n  \"L_delta\": 0.85,\n  \"rationale\": \"The query plan and I/O layer are frozen, leading to unavoidable overhead. The floor is based on minimal work and fixed allocation costs, which cannot be reduced under the contract.\"\n}",
+ "usage": {
+  "completion_tokens": 342,
+  "prompt_tokens": 1379,
+  "total_tokens": 1721,
+  "prompt_tokens_details": {
+   "cached_tokens": 904
+  }
+ },
+ "seconds": 95.2
+}

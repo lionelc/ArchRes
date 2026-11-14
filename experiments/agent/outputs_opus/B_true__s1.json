@@ -1,0 +1,35 @@
+{
+ "gap": "B_true",
+ "seed": 1,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\": \"fixable\",\n \"chokepoint\": [],\n \"floor_ms\": 0,\n \"L_delta\": 0,\n \"rationale\": \"The contract freezes nothing, so no chokepoint can be certified. The 1.2 ms excess for `true` is probably start-up overhead of the 19 MB dynamically linked PIE: dynamic loading, relative relocations touching many pages, and page faults. Building statically and non-PIE (relocation-model=static, static linking) would likely remove most of it, with LTO and section trimming helping further. These are build settings that keep the binary pure Rust and multicall, so they are admissible.\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1115,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 549,
+  "output_tokens_details": {
+   "thinking_tokens": 332
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 6.6
+}

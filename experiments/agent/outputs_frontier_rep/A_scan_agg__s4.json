@@ -1,0 +1,28 @@
+{
+ "gap": "A_scan_agg",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No frozen-operator floor is established. The profile primarily measures mutable VDBE and B-tree work, not unavoidable asynchronous-I/O costs minimized across admissible caching and batching contexts. Moreover, certification requires a floor above 122.5 \u00d7 exp(0.165) \u2248 144.5 ms, exceeding the observed Y runtime. Mutable-code optimization is plausible, but no specific change is demonstrated to close the measured gap.\"}",
+ "usage": {
+  "input_tokens": 1359,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1356
+  },
+  "output_tokens": 633,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1992
+ },
+ "finish": "completed",
+ "seconds": 16.5
+}

@@ -1,0 +1,28 @@
+{
+ "gap": "A_join3_star",
+ "seed": 6,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"The profiled hot paths and query plan are mutable. The frozen file format does not require this plan or its lookup counts. No minimum cost is supplied for unavoidable asynchronous I/O under optimal caching and batching, so no architectural floor above 115.5 ms is established. Planner and execution changes are plausible improvements, but none is demonstrated to close the gap. Zero numeric fields indicate no certified floor.\"\n}",
+ "usage": {
+  "input_tokens": 1513,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1510
+  },
+  "output_tokens": 597,
+  "output_tokens_details": {
+   "reasoning_tokens": 473
+  },
+  "total_tokens": 2110
+ },
+ "finish": "completed",
+ "seconds": 15.2
+}

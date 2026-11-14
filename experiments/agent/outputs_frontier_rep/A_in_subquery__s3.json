@@ -1,0 +1,28 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The profiled hotspots are mutable VDBE and record-decoding code. The frozen file format supplies no timing lower bound, and no minimum asynchronous-I/O cost across admissible batching, caching, and buffer sizes is established. Startup costs cannot count either. Consequently, no architectural certificate is supported, and no specific admissible change is demonstrated to close the gap. Numeric zeros indicate that no floor or L_delta was certified.\"}",
+ "usage": {
+  "input_tokens": 1419,
+  "input_tokens_details": {
+   "cache_write_tokens": 1416,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1416
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 590,
+  "output_tokens_details": {
+   "reasoning_tokens": 475
+  },
+  "total_tokens": 2009
+ },
+ "finish": "completed",
+ "seconds": 26.3
+}

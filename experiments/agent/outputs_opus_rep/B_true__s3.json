@@ -1,0 +1,35 @@
+{
+ "gap": "B_true",
+ "seed": 3,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\": \"fixable\",\n \"chokepoint\": [],\n \"floor_ms\": 0,\n \"L_delta\": -100,\n \"rationale\": \"The contract freezes no component, so no frozen chokepoint exists and the floor is effectively zero (L_delta is a placeholder for log 0). The 1.2 ms excess is start-up overhead: loading and relocating a 19 MB dynamically linked PIE. Admissible fixes are expected to close it, though not measured here: static non-PIE linking (crt-static, relocation-model=static), relro/lazy-binding settings, trimming constructors, and an early `true` fast path in dispatch.\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1115,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 791,
+  "output_tokens_details": {
+   "thinking_tokens": 569
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 9.3
+}

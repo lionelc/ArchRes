@@ -1,0 +1,14 @@
+{
+ "gap": "W_cp128",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"pread64\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 interface requires reading via fd_read\",\n      \"least_work\": {\n        \"amount\": 65536,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 1.2,\n        \"total_ms\": 80.0,\n        \"calling_context\": \"Single-threaded, 8 KiB per call\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"pwrite64\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 interface requires writing via fd_write\",\n      \"least_work\": {\n        \"amount\": 65536,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 1.2,\n        \"total_ms\": 80.0,\n        \"calling_context\": \"Single-threaded, 8 KiB per call\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 80.0,\n  \"L_delta\": 3.19,\n  \"rationale\": \"The gap is architectural due to the frozen WASI interface requiring 65,536 pread64 and pwrite64 calls, each with 8 KiB, leading to high overhead. No admissible change can reduce these calls, making the gap unavoidable.\"\n}",
+ "usage": {
+  "completion_tokens": 356,
+  "prompt_tokens": 955,
+  "total_tokens": 1311,
+  "prompt_tokens_details": {
+   "cached_tokens": 742
+  }
+ },
+ "seconds": 86.6
+}

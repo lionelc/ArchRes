@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -f "$1.out_r"
+exec /work/pilot/bin/gnu-9.12/bin/cp "$1" "$1.out_r"

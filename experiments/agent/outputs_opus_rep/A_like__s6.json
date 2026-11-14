@@ -1,0 +1,35 @@
+{
+ "gap": "A_like",
+ "seed": 6,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "{\"class\": \"fixable\",\n \"chokepoint\": [{\"operator\": \"asynchronous I/O page reads of orders table B-tree\",\n                 \"component\": \"asynchronous I/O layer\",\n                 \"frozen\": true,\n                 \"why_every_version_executes_it\": \"A full scan is required for LIKE '%qz%', and every page read passes through the frozen async I/O layer\",\n                 \"least_work\": {\"amount\": 26364, \"unit\": \"pages\", \"per_unit_cost_us\": 0.5,\n                                \"total_ms\": 13.2,\n                                \"calling_context\": \"warm OS page cache; at most 6 statements each scanning 4,394 orders pages; page cache could make repeats free\"},\n                 \"max_cores\": 4}],\n \"floor_ms\": 13.2,\n \"L_delta\": -2.92,\n \"rationale\": \"About 61% of Turso's instructions are in exec_like, which belongs to the mutable VDBE. SQLite handles the same pattern with patternCompare plus strcspn. Rewriting exec_like is admissible and should close the gap: compile the pattern once per statement, and use a fast memchr or substring search for '%lit%' patterns without per-row allocation or regex. The frozen I/O floor (~13 ms) is far below T_R_upper (245.9 ms). The start-up gap is about 4.5 ms.\"}",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 2088,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 801,
+  "output_tokens_details": {
+   "thinking_tokens": 351
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 9.0
+}

@@ -1,0 +1,28 @@
+{
+ "gap": "A_point_rowid",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No frozen-operator floor is certified; numeric zeros denote no established floor or delta. The contract permits replacing the parser, allocator usage, shell, execution engine, and page cache. Caching can eliminate repeated asynchronous page reads, and no minimum unavoidable I/O count or per-call cost is supplied. Profiles and startup timings therefore cannot prove architecturality. Nor is any specific admissible change demonstrated to reach the approximately 23.6 ms target.\"}",
+ "usage": {
+  "input_tokens": 1328,
+  "input_tokens_details": {
+   "cache_write_tokens": 1325,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1325
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 635,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1963
+ },
+ "finish": "completed",
+ "seconds": 16.4
+}

@@ -1,0 +1,28 @@
+{
+ "gap": "A_insert_txn",
+ "seed": 6,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The profile primarily identifies mutable VDBE and B-tree work, not frozen implementation costs. No unavoidable asynchronous-I/O count or minimum cost across admissible batching and caching contexts is established; eight script statements are also unspecified. Consequently, no architectural floor is certified, and no specific admissible change is shown to close the gap. Zero numeric fields denote an unavailable floor.\"}",
+ "usage": {
+  "input_tokens": 1363,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1360
+  },
+  "output_tokens": 466,
+  "output_tokens_details": {
+   "reasoning_tokens": 362
+  },
+  "total_tokens": 1829
+ },
+ "finish": "completed",
+ "seconds": 13.5
+}

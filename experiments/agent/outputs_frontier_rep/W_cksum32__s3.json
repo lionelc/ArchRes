@@ -1,0 +1,28 @@
+{
+ "gap": "W_cksum32",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No floor is certified; zero floor/delta fields denote unavailable values. Checksum computation and buffering are mutable, so their observed costs cannot count. The native read measurement establishes no least cost across all admissible WASI calling contexts; its approximately 4.2 ms estimate is also below the 12.14 ms certificate threshold. No specific admissible change is demonstrated to close the gap.\"}",
+ "usage": {
+  "input_tokens": 877,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1143,
+  "output_tokens_details": {
+   "reasoning_tokens": 1034
+  },
+  "total_tokens": 2020
+ },
+ "finish": "completed",
+ "seconds": 34.0
+}

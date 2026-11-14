@@ -1,0 +1,35 @@
+{
+ "gap": "A_startup",
+ "seed": 5,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\": \"fixable\",\n \"chokepoint\": [{\"operator\": \"async I/O read of schema page (page 1)\", \"component\": \"asynchronous I/O layer\", \"frozen\": true,\n                 \"why_every_version_executes_it\": \"Opening the DB and preparing a statement requires the header and the sqlite_schema root, read through the frozen I/O layer\",\n                 \"least_work\": {\"amount\": 1, \"unit\": \"pages\", \"per_unit_cost_us\": 5, \"total_ms\": 0.005, \"calling_context\": \"single 4 KiB read from a warm OS page cache, schema loaded lazily\"},\n                 \"max_cores\": 1}],\n \"floor_ms\": 0.005, \"L_delta\": -6.4,\n \"rationale\": \"The only frozen work is about one page read, roughly 5 \u00b5s. The profile is dominated by mutable start-up cost: dynamic relocation and symbol lookup (_dl_relocate_object, do_lookup_x), shell-side crossbeam channel and thread setup, and mimalloc initialisation. Build options and the shell are admissible to change. Static linking, lazy I/O and thread setup, and lazy schema parsing should bring T_Y under about 4.1 ms (3.0\u00b7e^0.321).\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1981,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 965,
+  "output_tokens_details": {
+   "thinking_tokens": 542
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 11.5
+}

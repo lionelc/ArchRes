@@ -1,0 +1,35 @@
+{
+ "gap": "A_point_rowid",
+ "seed": 1,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "{\"class\": \"candidate\", \"chokepoint\": [{\"operator\": \"page reads through the asynchronous I/O layer\", \"component\": \"asynchronous I/O layer\", \"frozen\": true, \"why_every_version_executes_it\": \"Every point lookup must read the orders root, interior and leaf pages at least once, and every page read passes through the frozen I/O layer.\", \"least_work\": {\"amount\": 2000, \"unit\": \"pages\", \"per_unit_cost_us\": 1, \"total_ms\": 2, \"calling_context\": \"Mutable page cache keeps each page after its first read, so only distinct pages are read: about 2000 leaves at most, plus a few interior pages, from the warm OS cache.\"}, \"max_cores\": 1}], \"floor_ms\": 2, \"L_delta\": -2.15, \"rationale\": \"The only frozen work is reading at most about 2000 distinct pages through the I/O layer, roughly 2 ms. That is far below T_R_upper of 17.1 ms. Turso spends its extra ~90M instructions in mutable code: allocator calls, memcpy/memset, the parser and slower start-up. So no certificate exists. No single setting or named change is shown to close a 0.85 log gap, so the class is candidate.\"}",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 2073,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 914,
+  "output_tokens_details": {
+   "thinking_tokens": 507
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 10.2
+}

@@ -1,0 +1,28 @@
+{
+ "gap": "D_plant_mutable",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Set GAPCR_PLANT_US=0 or unset it. The frozen constructor still executes but skips its busy-wait. The unplanted runtime, 27.8 ms, is already below the reference\u2019s 43.6 ms and thus within the band. The measured 84.4 ms constructor overhead is not its least cost across admissible settings. No floor is asserted; zero floor fields are placeholders.\"}",
+ "usage": {
+  "input_tokens": 1012,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 486,
+  "output_tokens_details": {
+   "reasoning_tokens": 371
+  },
+  "total_tokens": 1498
+ },
+ "finish": "completed",
+ "seconds": 22.4
+}

@@ -1,0 +1,14 @@
+{
+ "gap": "B_wc_l",
+ "seed": 1,
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"The gap between Y and R is not architectural as uutils can be optimized via Rust features, compiler optimizations, or code changes within the architecture contract. The start-up time difference is significant but not a chokepoint. The gap may be fixable through code improvements.\"\n}",
+ "usage": {
+  "completion_tokens": 92,
+  "prompt_tokens": 806,
+  "total_tokens": 898,
+  "prompt_tokens_details": {
+   "cached_tokens": 634
+  }
+ },
+ "seconds": 25.9
+}

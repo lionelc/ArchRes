@@ -1,0 +1,28 @@
+{
+ "gap": "A_distinct",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Hash-based DISTINCT and startup are mutable, so neither contributes to a frozen-work floor. Ordered-index DISTINCT with duplicate-key skipping is an admissible optimization, but its full-script runtime is unknown; measured startup alone exceeds the 5.38 ms target and also needs improvement. No mandatory asynchronous-I/O call count with context-independent minimum costs is established. Thus neither an architectural certificate nor a gap-closing fix is demonstrated.\"}",
+ "usage": {
+  "input_tokens": 1382,
+  "input_tokens_details": {
+   "cache_write_tokens": 1379,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1379
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 733,
+  "output_tokens_details": {
+   "reasoning_tokens": 619
+  },
+  "total_tokens": 2115
+ },
+ "finish": "completed",
+ "seconds": 19.1
+}

@@ -1,0 +1,28 @@
+{
+ "gap": "A_insert_txn",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No certified floor or delta is available; zeros denote unavailable bounds. Only BEGIN is disclosed, and neither unavoidable asynchronous-I/O counts nor minimum costs across admissible contexts are supplied. The profiled interpreter, record-building, and B-tree work is mutable, so its observed cost cannot support an architectural floor. File-format and SQL requirements do not freeze those implementations. No specific admissible change is demonstrated to close the gap.\"}",
+ "usage": {
+  "input_tokens": 1363,
+  "input_tokens_details": {
+   "cache_write_tokens": 1360,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1360
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 460,
+  "output_tokens_details": {
+   "reasoning_tokens": 346
+  },
+  "total_tokens": 1823
+ },
+ "finish": "completed",
+ "seconds": 22.5
+}

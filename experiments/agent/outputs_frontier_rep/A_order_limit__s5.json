@@ -1,0 +1,28 @@
+{
+ "gap": "A_order_limit",
+ "seed": 5,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"No certified floor; numeric zeros are placeholders. The dominant scan/sort work is mutable, including record decoding and sorting. A bounded top-10 implementation is admissible, but its full-cell runtime is unmeasured. Neither execution plans nor instruction profiles establish minimum frozen asynchronous-I/O costs across all caching and batching contexts. Consequently, the evidence supports neither an architectural certificate nor a demonstrated fix closing the gap for all 15 statements.\"\n}",
+ "usage": {
+  "input_tokens": 1398,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1395
+  },
+  "output_tokens": 826,
+  "output_tokens_details": {
+   "reasoning_tokens": 695
+  },
+  "total_tokens": 2224
+ },
+ "finish": "completed",
+ "seconds": 21.3
+}

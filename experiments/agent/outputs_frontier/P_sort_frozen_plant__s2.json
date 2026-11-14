@@ -1,0 +1,28 @@
+{
+ "gap": "P_sort_frozen_plant",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Set GAPCR_PLANT_US=0 while retaining LD_PRELOAD. F remains unchanged and executes once, but returns without busy-waiting. The contract freezes the constructor, not this environment setting. Removing the planted delay returns performance approximately to the measured unplanted 27.8 ms, already faster than R. Therefore 84.284 ms is not a valid context-independent least-work bound; no positive floor is asserted.\"}",
+ "usage": {
+  "input_tokens": 984,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1441,
+  "output_tokens_details": {
+   "reasoning_tokens": 1323
+  },
+  "total_tokens": 2425
+ },
+ "finish": "completed",
+ "seconds": 27.9
+}

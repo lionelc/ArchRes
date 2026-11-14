@@ -1,0 +1,14 @@
+{
+ "gap": "W_cksum32",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"fd_read\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI interface requires fd_read for file input\",\n      \"least_work\": {\n        \"amount\": 32,\n        \"unit\": \"MiB\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 3.2,\n        \"calling_context\": \"Sequential read with 1 MiB buffer\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"fd_write\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI interface requires fd_write for file output\",\n      \"least_work\": {\n        \"amount\": 32,\n        \"unit\": \"MiB\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 3.2,\n        \"calling_context\": \"Sequential write with 1 MiB buffer\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 6.4,\n  \"L_delta\": 1.37,\n  \"rationale\": \"The gap is architectural due to the frozen WASI interface requiring sequential read/write operations with no parallelism. The floor is determined by the minimum possible cost of the frozen operators. The gap exceeds the band, indicating architectural limitations.\"\n}",
+ "usage": {
+  "completion_tokens": 329,
+  "prompt_tokens": 901,
+  "total_tokens": 1230,
+  "prompt_tokens_details": {
+   "cached_tokens": 742
+  }
+ },
+ "seconds": 79.5
+}

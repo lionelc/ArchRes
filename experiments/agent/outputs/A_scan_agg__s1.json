@@ -1,0 +1,14 @@
+{
+ "gap": "A_scan_agg",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"op_agg_step\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Aggregation is part of the SQL semantics, which is frozen by the contract.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1000,\n        \"calling_context\": \"Aggregation over 300,000 rows\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"op_column_range_fetch\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Column range fetching is part of the SQL semantics, which is frozen by the contract.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 500,\n        \"total_ms\": 500,\n        \"calling_context\": \"Fetching columns from 300,000 rows\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 1500,\n  \"L_delta\": 0.26,\n  \"rationale\": \"The gap is architectural because the VDBE interpreter's operations are frozen, and their least work cannot be reduced under the contract. The floor exceeds the reference's upper bound, indicating no admissible changes can close the gap.\"\n}",
+ "usage": {
+  "completion_tokens": 358,
+  "prompt_tokens": 1411,
+  "total_tokens": 1769,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 102.7
+}

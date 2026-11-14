@@ -1,0 +1,28 @@
+{
+ "gap": "W_cksum32",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"All file bytes must be inspected, but checksum computation is mutable. The native read benchmark does not establish the least cost of frozen WASI fd_read across all admissible calling contexts. Thus no certified floor exceeds the approximately 12.14 ms threshold. Native uutils timing also does not demonstrate an admissible WebAssembly fix. Numeric zeros denote that no floor or corresponding log delta is certified.\"}",
+ "usage": {
+  "input_tokens": 877,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 609,
+  "output_tokens_details": {
+   "reasoning_tokens": 500
+  },
+  "total_tokens": 1486
+ },
+ "finish": "completed",
+ "seconds": 15.1
+}

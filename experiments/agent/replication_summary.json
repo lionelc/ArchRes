@@ -1,0 +1,938 @@
+{
+ "arm_R": {
+  "GPT-6.1 Sol": {
+   "new_samples": {
+    "outputs": 80,
+    "parsed": 80,
+    "premises": 0,
+    "classes": {
+     "architectural": 0,
+     "candidate": 74,
+     "fixable": 6
+    },
+    "type_i": {
+     "premises": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "type_ii": {
+     "premises": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "type_iii": {
+     "premises": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "type_iv": {
+     "premises": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "type_v_outputs": {
+     "outputs": 0,
+     "rate": 0.0
+    },
+    "unsupported_architectural": {
+     "k": 0,
+     "n": 72,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.05
+     ],
+     "with_a_premise_error": 0
+    },
+    "architectural_found": {
+     "k": 0,
+     "n": 8
+    },
+    "valid_certificates": {
+     "k": 0,
+     "n": 8
+    }
+   },
+   "pooled_6": {
+    "outputs": 120,
+    "parsed": 120,
+    "premises": 0,
+    "classes": {
+     "architectural": 0,
+     "candidate": 112,
+     "fixable": 8
+    },
+    "type_i": {
+     "premises": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "type_ii": {
+     "premises": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "type_iii": {
+     "premises": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "type_iv": {
+     "premises": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "type_v_outputs": {
+     "outputs": 0,
+     "rate": 0.0
+    },
+    "unsupported_architectural": {
+     "k": 0,
+     "n": 108,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.034
+     ],
+     "with_a_premise_error": 0
+    },
+    "architectural_found": {
+     "k": 0,
+     "n": 12
+    },
+    "valid_certificates": {
+     "k": 0,
+     "n": 12
+    }
+   },
+   "cp_architectural": [
+    0,
+    8
+   ],
+   "planted_architectural": [
+    0,
+    4
+   ],
+   "planted_fixable": [
+    4,
+    4
+   ],
+   "fixable_on_candidate_gaps": [
+    2,
+    68
+   ],
+   "false_architectural_outside_planted": [
+    0,
+    68
+   ],
+   "classes_by_gap_all_samples": {
+    "A_distinct": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_in_subquery": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_insert_txn": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_join3_star": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_like": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_order_limit": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_point_index": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_point_rowid": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_scan_agg": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_startup": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "fixable"
+    ],
+    "B_basename": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "B_cat": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "B_cksum": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "B_true": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "B_wc_l": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "B_wc_m": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "fixable",
+     "candidate"
+    ],
+    "P_sort_frozen_plant": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable"
+    ],
+    "W_cksum32": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "W_cp128": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "W_cp512": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ]
+   }
+  },
+  "Claude Opus 5.5": {
+   "new_samples": {
+    "outputs": 80,
+    "parsed": 80,
+    "premises": 50,
+    "classes": {
+     "architectural": 12,
+     "candidate": 31,
+     "fixable": 37
+    },
+    "type_i": {
+     "premises": 3,
+     "rate": 0.06,
+     "ci95": [
+      0.013,
+      0.165
+     ]
+    },
+    "type_ii": {
+     "premises": 8,
+     "rate": 0.16,
+     "ci95": [
+      0.072,
+      0.291
+     ]
+    },
+    "type_iii": {
+     "premises": 0,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.071
+     ]
+    },
+    "type_iv": {
+     "premises": 6,
+     "rate": 0.12,
+     "ci95": [
+      0.045,
+      0.243
+     ]
+    },
+    "type_v_outputs": {
+     "outputs": 26,
+     "rate": 0.325
+    },
+    "unsupported_architectural": {
+     "k": 4,
+     "n": 72,
+     "rate": 0.056,
+     "ci95": [
+      0.015,
+      0.136
+     ],
+     "with_a_premise_error": 4
+    },
+    "architectural_found": {
+     "k": 8,
+     "n": 8
+    },
+    "valid_certificates": {
+     "k": 5,
+     "n": 8
+    }
+   },
+   "pooled_6": {
+    "outputs": 120,
+    "parsed": 120,
+    "premises": 79,
+    "classes": {
+     "architectural": 18,
+     "candidate": 44,
+     "fixable": 58
+    },
+    "type_i": {
+     "premises": 3,
+     "rate": 0.038,
+     "ci95": [
+      0.008,
+      0.107
+     ]
+    },
+    "type_ii": {
+     "premises": 11,
+     "rate": 0.139,
+     "ci95": [
+      0.072,
+      0.235
+     ]
+    },
+    "type_iii": {
+     "premises": 0,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.046
+     ]
+    },
+    "type_iv": {
+     "premises": 8,
+     "rate": 0.101,
+     "ci95": [
+      0.045,
+      0.19
+     ]
+    },
+    "type_v_outputs": {
+     "outputs": 43,
+     "rate": 0.358
+    },
+    "unsupported_architectural": {
+     "k": 6,
+     "n": 108,
+     "rate": 0.056,
+     "ci95": [
+      0.021,
+      0.117
+     ],
+     "with_a_premise_error": 6
+    },
+    "architectural_found": {
+     "k": 12,
+     "n": 12
+    },
+    "valid_certificates": {
+     "k": 9,
+     "n": 12
+    }
+   },
+   "cp_architectural": [
+    8,
+    8
+   ],
+   "planted_architectural": [
+    4,
+    4
+   ],
+   "planted_fixable": [
+    0,
+    4
+   ],
+   "fixable_on_candidate_gaps": [
+    37,
+    68
+   ],
+   "false_architectural_outside_planted": [
+    0,
+    68
+   ],
+   "classes_by_gap_all_samples": {
+    "A_distinct": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable"
+    ],
+    "A_in_subquery": [
+     "fixable",
+     "candidate",
+     "candidate",
+     "fixable",
+     "fixable",
+     "candidate"
+    ],
+    "A_insert_txn": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_join3_star": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_like": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable"
+    ],
+    "A_order_limit": [
+     "candidate",
+     "fixable",
+     "fixable",
+     "fixable",
+     "candidate",
+     "candidate"
+    ],
+    "A_point_index": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_point_rowid": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_scan_agg": [
+     "candidate",
+     "fixable",
+     "fixable",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "A_startup": [
+     "fixable",
+     "fixable",
+     "candidate",
+     "candidate",
+     "fixable",
+     "candidate"
+    ],
+    "B_basename": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable"
+    ],
+    "B_cat": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable"
+    ],
+    "B_cksum": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable"
+    ],
+    "B_true": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable"
+    ],
+    "B_wc_l": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable"
+    ],
+    "B_wc_m": [
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "fixable",
+     "candidate"
+    ],
+    "P_sort_frozen_plant": [
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural"
+    ],
+    "W_cksum32": [
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate",
+     "candidate"
+    ],
+    "W_cp128": [
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural"
+    ],
+    "W_cp512": [
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural",
+     "architectural"
+    ]
+   }
+  }
+ },
+ "criteria": {
+  "C-R1": true,
+  "C-R2": true,
+  "C-R3": true,
+  "C-R4 (secondary)": true
+ },
+ "split_confirmed": true,
+ "arm_D": {
+  "GPT-6.1 Sol": {
+   "D_plant_mutable": {
+    "expected": "fixable",
+    "outputs": [
+     {
+      "sample": 1,
+      "class": "fixable",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 2,
+      "class": "fixable",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 3,
+      "class": "fixable",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 4,
+      "class": "fixable",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     }
+    ],
+    "matches": 4,
+    "n": 4,
+    "follows": true
+   },
+   "D_plant_frozen": {
+    "expected": "architectural",
+    "outputs": [
+     {
+      "sample": 1,
+      "class": "architectural",
+      "L_delta": 0.5322,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 2,
+      "class": "architectural",
+      "L_delta": 0.53222,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 3,
+      "class": "architectural",
+      "L_delta": 0.5322,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 4,
+      "class": "architectural",
+      "L_delta": 0.5322,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     }
+    ],
+    "matches": 4,
+    "n": 4,
+    "follows": true
+   },
+   "D_cp512_ceiling": {
+    "expected": "architectural",
+    "outputs": [
+     {
+      "sample": 1,
+      "class": "architectural",
+      "L_delta": 2.635619,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 2,
+      "class": "architectural",
+      "L_delta": 2.635619,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 3,
+      "class": "architectural",
+      "L_delta": 2.635619,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 4,
+      "class": "architectural",
+      "L_delta": 2.635619,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     }
+    ],
+    "matches": 4,
+    "n": 4,
+    "follows": true
+   },
+   "D_cp512_noceiling": {
+    "expected": "candidate",
+    "outputs": [
+     {
+      "sample": 1,
+      "class": "candidate",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 2,
+      "class": "candidate",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 3,
+      "class": "candidate",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 4,
+      "class": "candidate",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     }
+    ],
+    "matches": 4,
+    "n": 4,
+    "follows": true
+   }
+  },
+  "Claude Opus 5.5": {
+   "D_plant_mutable": {
+    "expected": "fixable",
+    "outputs": [
+     {
+      "sample": 1,
+      "class": "fixable",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 2,
+      "class": "fixable",
+      "L_delta": -10.81,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 3,
+      "class": "fixable",
+      "L_delta": -8.51,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 4,
+      "class": "fixable",
+      "L_delta": -10.81,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     }
+    ],
+    "matches": 4,
+    "n": 4,
+    "follows": true
+   },
+   "D_plant_frozen": {
+    "expected": "architectural",
+    "outputs": [
+     {
+      "sample": 1,
+      "class": "architectural",
+      "L_delta": 0.532,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 2,
+      "class": "architectural",
+      "L_delta": 0.532,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 3,
+      "class": "architectural",
+      "L_delta": 0.532,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 4,
+      "class": "architectural",
+      "L_delta": 0.532,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     }
+    ],
+    "matches": 4,
+    "n": 4,
+    "follows": true
+   },
+   "D_cp512_ceiling": {
+    "expected": "architectural",
+    "outputs": [
+     {
+      "sample": 1,
+      "class": "architectural",
+      "L_delta": 2.636,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 2,
+      "class": "architectural",
+      "L_delta": 2.636,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 3,
+      "class": "architectural",
+      "L_delta": 2.636,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 4,
+      "class": "architectural",
+      "L_delta": 2.636,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     }
+    ],
+    "matches": 4,
+    "n": 4,
+    "follows": true
+   },
+   "D_cp512_noceiling": {
+    "expected": "candidate",
+    "outputs": [
+     {
+      "sample": 1,
+      "class": "candidate",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 2,
+      "class": "candidate",
+      "L_delta": 0,
+      "uses_stated_rate": false,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 3,
+      "class": "candidate",
+      "L_delta": 2.635,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     },
+     {
+      "sample": 4,
+      "class": "candidate",
+      "L_delta": 2.636,
+      "uses_stated_rate": true,
+      "match": true,
+      "independent_bound_for_review": false
+     }
+    ],
+    "matches": 4,
+    "n": 4,
+    "follows": true
+   }
+  }
+ },
+ "explanation_supported": true
+}

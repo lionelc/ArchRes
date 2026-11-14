@@ -1,0 +1,14 @@
+{
+ "gap": "A_join3_star",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"HASH JOIN orders AS o\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite's query plan uses hash joins for large joins\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"join\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1000,\n        \"calling_context\": \"large join on 300k rows\"\n      },\n      \"max_cores\": 4\n    },\n    {\n      \"operator\": \"SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\",\n      \"component\": \"asynchronous I/O layer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite uses primary key search for lookups\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"lookup\",\n        \"per_unit_cost_us\": 500,\n        \"total_ms\": 500,\n        \"calling_context\": \"primary key lookup on 30k rows\"\n      },\n      \"max_cores\": 4\n    },\n    {\n      \"operator\": \"SCAN items AS i\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite uses full scans for unindexed columns\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"scan\",\n        \"per_unit_cost_us\": 1500,\n        \"total_ms\": 1500,\n        \"calling_context\": \"full scan on 5k rows\"\n      },\n      \"max_cores\": 4\n    },\n    {\n      \"operator\": \"USE SORTER FOR GROUP BY\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite uses sorters for group by operations\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"group by\",\n        \"per_unit_cost_us\": 2000,\n        \"total_ms\": 2000,\n        \"calling_context\": \"group by on 300k rows\"\n      },\n      \"max_cores\": 4\n    }\n  ],\n  \"floor_ms\": 4000,\n  \"L_delta\": 0.74,\n  \"rationale\": \"The chokepoint operators in Turso are frozen by the architecture contract and have least work that cannot be reduced. The floor is higher than the upper bound of R's time, making the gap architectural.\"\n}",
+ "usage": {
+  "completion_tokens": 579,
+  "prompt_tokens": 1564,
+  "total_tokens": 2143,
+  "prompt_tokens_details": {
+   "cached_tokens": 1563
+  }
+ },
+ "seconds": 151.7
+}

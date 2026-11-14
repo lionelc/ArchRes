@@ -1,0 +1,1164 @@
+{
+ "1|S1|count_star": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders USING COVERING INDEX orders_day\n",
+   "steps": [
+    "SCAN orders [orders_day]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders USING COVERING INDEX orders_day\n",
+   "steps": [
+    "SCAN orders [orders_day]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": false
+ },
+ "1|S0|count_star": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders USING COVERING INDEX orders_day\n",
+   "steps": [
+    "SCAN orders [orders_day]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders USING COVERING INDEX orders_day\n",
+   "steps": [
+    "SCAN orders [orders_day]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": false
+ },
+ "1|S1|distinct": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders USING COVERING INDEX orders_cust\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders USING COVERING INDEX orders_cust\n4|0|0|USE HASH TABLE FOR count(DISTINCT)\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders USING COVERING INDEX orders_cust\n`--USE HASH TABLE FOR count(DISTINCT)\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S0|distinct": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders USING COVERING INDEX orders_cust\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders USING COVERING INDEX orders_cust\n4|0|0|USE HASH TABLE FOR count(DISTINCT)\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders USING COVERING INDEX orders_cust\n`--USE HASH TABLE FOR count(DISTINCT)\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S1|group_by": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n4|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S0|group_by": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n4|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S1|in_subquery": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\n`--LIST SUBQUERY 1\n   |--SCAN orders\n   `--CREATE BLOOM FILTER\n",
+   "steps": [
+    "SEARCH customers [PK]",
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "BLOOM"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|LIST SUBQUERY 1\n4|1|0|SCAN orders\n13|0|0|SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "SEARCH customers [PK]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--LIST SUBQUERY 1\n|  `--SCAN orders\n`--SCAN customers\n",
+   "steps": [
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "SCAN customers [full]"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "1|S0|in_subquery": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\n`--LIST SUBQUERY 1\n   |--SCAN orders\n   `--CREATE BLOOM FILTER\n",
+   "steps": [
+    "SEARCH customers [PK]",
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "BLOOM"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|LIST SUBQUERY 1\n4|1|0|SCAN orders\n13|0|0|SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "SEARCH customers [PK]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--LIST SUBQUERY 1\n|  `--SCAN orders\n`--SCAN customers\n",
+   "steps": [
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "SCAN customers [full]"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "1|S1|join2": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN o\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN o [full]",
+    "SEARCH c [PK]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN customers AS c USING COVERING INDEX customers_region\n2|0|0|SEARCH o USING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SCAN customers [customers_region]",
+    "SEARCH o [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN customers AS c USING COVERING INDEX customers_region\n`--SEARCH o USING INDEX orders_cust\n",
+   "steps": [
+    "SCAN customers [customers_region]",
+    "SEARCH o [orders_cust]"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "1|S0|join2": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN c USING COVERING INDEX customers_region\n`--SEARCH o USING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SCAN c [customers_region]",
+    "SEARCH o [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders AS o\n2|0|0|SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n5|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "SEARCH c [PK]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders AS o\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "SEARCH c [PK]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "1|S1|join3_star": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN o\n|--BLOOM FILTER ON c (id=?)\n|--BLOOM FILTER ON i (id=?)\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n|--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN o [full]",
+    "BLOOM",
+    "BLOOM",
+    "SEARCH c [PK]",
+    "SEARCH i [PK]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|HASH JOIN orders AS o\n2|0|0|SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n3|0|0|SCAN items AS i\n6|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SEARCH c [PK]",
+    "SCAN items [full]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders AS o\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n|--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "SEARCH c [PK]",
+    "SEARCH i [PK]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "1|S0|join3_star": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN o\n|--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN o [full]",
+    "SEARCH i [PK]",
+    "SEARCH c [PK]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|HASH JOIN orders AS o\n2|0|0|SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n3|0|0|SCAN items AS i\n6|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SEARCH c [PK]",
+    "SCAN items [full]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SEARCH c USING INDEX customers_region\n|--SEARCH o USING INDEX orders_cust\n|--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SEARCH c [customers_region]",
+    "SEARCH o [orders_cust]",
+    "SEARCH i [PK]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "1|S1|like": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S0|like": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S1|order_limit": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE TEMP B-TREE FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n12|0|0|USE SORTER FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE SORTER FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S0|order_limit": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE TEMP B-TREE FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n12|0|0|USE SORTER FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE SORTER FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S1|point_index": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING COVERING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING COVERING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_cust\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S0|point_index": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING COVERING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING COVERING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_cust\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S1|point_rowid": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S0|point_rowid": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S1|range_index": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_day (day>? AND day<?)\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING INDEX orders_day (day>=? AND day<=?)\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_day\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S0|range_index": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_day (day>? AND day<?)\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING INDEX orders_day (day>=? AND day<=?)\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_day\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S1|scan_agg": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "1|S0|scan_agg": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S1|count_star": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders USING COVERING INDEX orders_day\n",
+   "steps": [
+    "SCAN orders [orders_day]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders USING COVERING INDEX orders_day\n",
+   "steps": [
+    "SCAN orders [orders_day]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": false
+ },
+ "2|S0|count_star": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders USING COVERING INDEX orders_day\n",
+   "steps": [
+    "SCAN orders [orders_day]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders USING COVERING INDEX orders_day\n",
+   "steps": [
+    "SCAN orders [orders_day]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": false
+ },
+ "2|S1|distinct": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders USING COVERING INDEX orders_cust\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders USING COVERING INDEX orders_cust\n4|0|0|USE HASH TABLE FOR count(DISTINCT)\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders USING COVERING INDEX orders_cust\n`--USE HASH TABLE FOR count(DISTINCT)\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S0|distinct": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders USING COVERING INDEX orders_cust\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders USING COVERING INDEX orders_cust\n4|0|0|USE HASH TABLE FOR count(DISTINCT)\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders USING COVERING INDEX orders_cust\n`--USE HASH TABLE FOR count(DISTINCT)\n",
+   "steps": [
+    "SCAN orders [orders_cust]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S1|group_by": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n4|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S0|group_by": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n4|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S1|in_subquery": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\n`--LIST SUBQUERY 1\n   |--SCAN orders\n   `--CREATE BLOOM FILTER\n",
+   "steps": [
+    "SEARCH customers [PK]",
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "BLOOM"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|LIST SUBQUERY 1\n4|1|0|SCAN orders\n13|0|0|SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "SEARCH customers [PK]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--LIST SUBQUERY 1\n|  `--SCAN orders\n`--SCAN customers\n",
+   "steps": [
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "SCAN customers [full]"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "2|S0|in_subquery": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\n`--LIST SUBQUERY 1\n   |--SCAN orders\n   `--CREATE BLOOM FILTER\n",
+   "steps": [
+    "SEARCH customers [PK]",
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "BLOOM"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|LIST SUBQUERY 1\n4|1|0|SCAN orders\n13|0|0|SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "SEARCH customers [PK]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--LIST SUBQUERY 1\n|  `--SCAN orders\n`--SCAN customers\n",
+   "steps": [
+    "SUBQUERY",
+    "SCAN orders [full]",
+    "SCAN customers [full]"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "2|S1|join2": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN o\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN o [full]",
+    "SEARCH c [PK]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN customers AS c USING COVERING INDEX customers_region\n2|0|0|SEARCH o USING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SCAN customers [customers_region]",
+    "SEARCH o [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN customers AS c USING COVERING INDEX customers_region\n`--SEARCH o USING INDEX orders_cust\n",
+   "steps": [
+    "SCAN customers [customers_region]",
+    "SEARCH o [orders_cust]"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "2|S0|join2": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN c USING COVERING INDEX customers_region\n`--SEARCH o USING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SCAN c [customers_region]",
+    "SEARCH o [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders AS o\n2|0|0|SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n5|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "SEARCH c [PK]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders AS o\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "SEARCH c [PK]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "2|S1|join3_star": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN o\n|--BLOOM FILTER ON c (id=?)\n|--BLOOM FILTER ON i (id=?)\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n|--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN o [full]",
+    "BLOOM",
+    "BLOOM",
+    "SEARCH c [PK]",
+    "SEARCH i [PK]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|HASH JOIN orders AS o\n2|0|0|SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n3|0|0|SCAN items AS i\n6|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SEARCH c [PK]",
+    "SCAN items [full]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders AS o\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n|--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "SEARCH c [PK]",
+    "SEARCH i [PK]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "2|S0|join3_star": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN o\n|--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)\n|--SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n`--USE TEMP B-TREE FOR GROUP BY\n",
+   "steps": [
+    "SCAN o [full]",
+    "SEARCH i [PK]",
+    "SEARCH c [PK]",
+    "GROUP"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|HASH JOIN orders AS o\n2|0|0|SEARCH c USING INTEGER PRIMARY KEY (rowid=?)\n3|0|0|SCAN items AS i\n6|0|0|USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SEARCH c [PK]",
+    "SCAN items [full]",
+    "GROUP"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SEARCH c USING INDEX customers_region\n|--SEARCH o USING INDEX orders_cust\n|--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)\n`--USE SORTER FOR GROUP BY\n",
+   "steps": [
+    "SEARCH c [customers_region]",
+    "SEARCH o [orders_cust]",
+    "SEARCH i [PK]",
+    "GROUP"
+   ]
+  },
+  "same_R_Y1": false,
+  "same_R_Y0": false
+ },
+ "2|S1|like": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S0|like": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S1|order_limit": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE TEMP B-TREE FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n12|0|0|USE SORTER FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE SORTER FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S0|order_limit": {
+  "R": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE TEMP B-TREE FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n12|0|0|USE SORTER FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n|--SCAN orders\n`--USE SORTER FOR ORDER BY\n",
+   "steps": [
+    "SCAN orders [full]",
+    "ORDER"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S1|point_index": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING COVERING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING COVERING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_cust\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S0|point_index": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING COVERING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING COVERING INDEX orders_cust (cust=?)\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_cust\n",
+   "steps": [
+    "SEARCH orders [orders_cust]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S1|point_rowid": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S0|point_rowid": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\n",
+   "steps": [
+    "SEARCH orders [PK]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S1|range_index": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_day (day>? AND day<?)\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING INDEX orders_day (day>=? AND day<=?)\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_day\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S0|range_index": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_day (day>? AND day<?)\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SEARCH orders USING INDEX orders_day (day>=? AND day<=?)\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SEARCH orders USING INDEX orders_day\n",
+   "steps": [
+    "SEARCH orders [orders_day]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S1|scan_agg": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ },
+ "2|S0|scan_agg": {
+  "R": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y1": {
+   "raw": "1|0|0|SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "Y0": {
+   "raw": "QUERY PLAN\n`--SCAN orders\n",
+   "steps": [
+    "SCAN orders [full]"
+   ]
+  },
+  "same_R_Y1": true,
+  "same_R_Y0": true
+ }
+}

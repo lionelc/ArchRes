@@ -1,0 +1,28 @@
+{
+ "gap": "P_sort_frozen_plant",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The contract freezes F and its invocation, but does not freeze GAPCR_PLANT_US. Set GAPCR_PLANT_US=0 while retaining LD_PRELOAD: F still executes once but skips the busy-wait. Consequently, 84.284 ms is not its least cost across admissible settings. Performance should approach the measured unplanted 27.8 ms, comfortably within the band even using GNU's 43.6 ms point estimate.\"}",
+ "usage": {
+  "input_tokens": 984,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1203,
+  "output_tokens_details": {
+   "reasoning_tokens": 1081
+  },
+  "total_tokens": 2187
+ },
+ "finish": "completed",
+ "seconds": 34.4
+}

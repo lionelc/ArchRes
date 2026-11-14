@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /work/wasi/wasmtime-v50.0.1-x86_64-linux/wasmtime run --allow-precompiled --dir /mnt/xfs /work/wasi/coreutils.cwasm cksum "$1"

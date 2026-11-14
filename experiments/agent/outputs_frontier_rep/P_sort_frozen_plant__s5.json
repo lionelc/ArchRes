@@ -1,0 +1,28 @@
+{
+ "gap": "P_sort_frozen_plant",
+ "seed": 5,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Set GAPCR_PLANT_US=0 while retaining LD_PRELOAD. Frozen F still executes once, but skips its busy-wait. The contract freezes the constructor, not this environment setting. The unplanted runtime of 27.8 ms is already below GNU's 43.6 ms, leaving ample room for constructor overhead. Thus 84.284 ms is not unavoidable least work. No floor is asserted.\"}",
+ "usage": {
+  "input_tokens": 984,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 979,
+  "output_tokens_details": {
+   "reasoning_tokens": 863
+  },
+  "total_tokens": 1963
+ },
+ "finish": "completed",
+ "seconds": 20.3
+}

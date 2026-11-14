@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /work/pilot/bin/sqlite3-3.50.4 -batch "$1.s" < "$2"

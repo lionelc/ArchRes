@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -f "$1.out_y"
+exec /work/pilot/bin/uu-0.12.0/coreutils cp "$1" "$1.out_y"

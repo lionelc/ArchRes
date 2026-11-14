@@ -1,0 +1,28 @@
+{
+ "gap": "P_sort_frozen_plant",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Set GAPCR_PLANT_US=0 or unset it, retaining LD_PRELOAD. The frozen constructor still runs once but returns without busy-waiting. The contract freezes F, not its environment setting, so 84.284 ms is not its least cost across admissible contexts. Removing the wait brings performance near the measured 27.8 ms without F, already faster than GNU and within the band.\"}",
+ "usage": {
+  "input_tokens": 984,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1054,
+  "output_tokens_details": {
+   "reasoning_tokens": 940
+  },
+  "total_tokens": 2038
+ },
+ "finish": "completed",
+ "seconds": 23.3
+}

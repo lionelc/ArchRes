@@ -1,0 +1,28 @@
+{
+ "gap": "P_sort_frozen_plant",
+ "seed": 6,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The contract freezes F's code and execution, not GAPCR_PLANT_US. Unset that variable while retaining LD_PRELOAD: F still executes once but immediately returns without waiting. This removes the planted 84.284 ms delay; the measured unplanted time, 27.8 ms, is already within band. Thus the busy-wait duration is not a least cost across admissible settings, and no architectural floor is asserted.\"}",
+ "usage": {
+  "input_tokens": 984,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1071,
+  "output_tokens_details": {
+   "reasoning_tokens": 951
+  },
+  "total_tokens": 2055
+ },
+ "finish": "completed",
+ "seconds": 27.5
+}

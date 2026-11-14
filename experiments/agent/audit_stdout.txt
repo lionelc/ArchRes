@@ -1,0 +1,214 @@
+{
+ "outputs": 40,
+ "parsed": 40,
+ "premises": 51,
+ "type_i": {
+  "premises_with_error": 0,
+  "rate_per_premise": 0.0,
+  "ci95_premise": [
+   0.0,
+   0.07
+  ],
+  "outputs_with_error": 0,
+  "rate_per_output": 0.0,
+  "ci95_output": [
+   0.0,
+   0.088
+  ]
+ },
+ "type_ii": {
+  "premises_with_error": 0,
+  "rate_per_premise": 0.0,
+  "ci95_premise": [
+   0.0,
+   0.07
+  ],
+  "outputs_with_error": 0,
+  "rate_per_output": 0.0,
+  "ci95_output": [
+   0.0,
+   0.088
+  ]
+ },
+ "type_iii": {
+  "premises_with_error": 32,
+  "rate_per_premise": 0.627,
+  "ci95_premise": [
+   0.481,
+   0.759
+  ],
+  "outputs_with_error": 20,
+  "rate_per_output": 0.5,
+  "ci95_output": [
+   0.338,
+   0.662
+  ]
+ },
+ "type_iv": {
+  "premises_with_error": 0,
+  "rate_per_premise": 0.0,
+  "ci95_premise": [
+   0.0,
+   0.07
+  ],
+  "outputs_with_error": 0,
+  "rate_per_output": 0.0,
+  "ci95_output": [
+   0.0,
+   0.088
+  ]
+ },
+ "type_v": {
+  "premises_with_error": 49,
+  "rate_per_premise": 0.961,
+  "ci95_premise": [
+   0.865,
+   0.995
+  ],
+  "outputs_with_error": 26,
+  "rate_per_output": 0.65,
+  "ci95_output": [
+   0.483,
+   0.794
+  ]
+ },
+ "unsupported_architectural": {
+  "k": 22,
+  "n": 34,
+  "rate": 0.647,
+  "ci95": [
+   0.465,
+   0.803
+  ]
+ },
+ "recall_architectural": {
+  "k": 6,
+  "n": 6,
+  "rate": 1.0
+ },
+ "any_error_in_unsupported_architectural": 22,
+ "supplementary_11a": {
+  "architectural_claims": 28,
+  "self_inconsistent_architectural": 9,
+  "v_frozen_or_platform_only_outputs": 7,
+  "unsupported_caught_by_contract_check_iii": 20,
+  "unsupported_caught_by_iii_or_own_C3": 22
+ },
+ "supplementary_11b": {
+  "type_i": {
+   "premises": 0,
+   "rate_premise": 0.0,
+   "ci95_premise": [
+    0.0,
+    0.07
+   ],
+   "outputs": 0,
+   "rate_output": 0.0,
+   "ci95_output": [
+    0.0,
+    0.088
+   ]
+  },
+  "type_ii": {
+   "premises": 2,
+   "rate_premise": 0.039,
+   "ci95_premise": [
+    0.005,
+    0.135
+   ],
+   "outputs": 2,
+   "rate_output": 0.05,
+   "ci95_output": [
+    0.006,
+    0.169
+   ]
+  },
+  "type_iii": {
+   "premises": 32,
+   "rate_premise": 0.627,
+   "ci95_premise": [
+    0.481,
+    0.759
+   ],
+   "outputs": 20,
+   "rate_output": 0.5,
+   "ci95_output": [
+    0.338,
+    0.662
+   ]
+  },
+  "type_iv": {
+   "premises": 9,
+   "rate_premise": 0.176,
+   "ci95_premise": [
+    0.084,
+    0.309
+   ],
+   "outputs": 5,
+   "rate_output": 0.125,
+   "ci95_output": [
+    0.042,
+    0.268
+   ]
+  },
+  "type_v": {
+   "premises": 49,
+   "rate_premise": 0.961,
+   "ci95_premise": [
+    0.865,
+    0.995
+   ],
+   "outputs": 26,
+   "rate_output": 0.65,
+   "ci95_output": [
+    0.483,
+    0.794
+   ]
+  },
+  "unsupported_architectural_with_any_error": 22,
+  "architectural_found_with_premise_errors": 4
+ },
+ "classes": {
+  "architectural": 28,
+  "candidate": 2,
+  "fixable": 10
+ },
+ "by_pair": {
+  "A": {
+   "outputs": 20,
+   "classes": {
+    "architectural": 20,
+    "candidate": 0,
+    "fixable": 0
+   },
+   "with_any_error": 20
+  },
+  "B native": {
+   "outputs": 12,
+   "classes": {
+    "architectural": 0,
+    "candidate": 2,
+    "fixable": 10
+   },
+   "with_any_error": 0
+  },
+  "B WebAssembly": {
+   "outputs": 6,
+   "classes": {
+    "architectural": 6,
+    "candidate": 0,
+    "fixable": 0
+   },
+   "with_any_error": 6
+  },
+  "planted": {
+   "outputs": 2,
+   "classes": {
+    "architectural": 2,
+    "candidate": 0,
+    "fixable": 0
+   },
+   "with_any_error": 0
+  }
+ }
+}

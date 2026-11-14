@@ -1,0 +1,14 @@
+{
+ "gap": "A_point_rowid",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"SEARCH orders USING INTEGER PRIMARY KEY (rowid=?)\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite file format and SQL semantics are frozen, forcing the same query plan.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"row\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 0.1,\n        \"calling_context\": \"fixed rowid, fixed data\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 0.1,\n  \"L_delta\": 0.85,\n  \"rationale\": \"The query plan is frozen, and the least work for the rowid lookup is fixed. The floor is determined by the minimum possible execution time, and the gap exceeds the band.\"\n}",
+ "usage": {
+  "completion_tokens": 212,
+  "prompt_tokens": 1379,
+  "total_tokens": 1591,
+  "prompt_tokens_details": {
+   "cached_tokens": 904
+  }
+ },
+ "seconds": 64.4
+}

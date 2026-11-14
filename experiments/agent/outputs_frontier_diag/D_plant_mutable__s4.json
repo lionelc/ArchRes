@@ -1,0 +1,28 @@
+{
+ "gap": "D_plant_mutable",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Set GAPCR_PLANT_US=0 while retaining the preload. F still executes, but skips its busy-wait. The contract explicitly permits changing this setting, so 84.284 ms is not unavoidable work. The measured unplanted time of 27.8 ms is already faster than GNU's 43.6 ms, hence within band. No floor is asserted; numeric floor fields are placeholders.\"}",
+ "usage": {
+  "input_tokens": 1012,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 535,
+  "output_tokens_details": {
+   "reasoning_tokens": 421
+  },
+  "total_tokens": 1547
+ },
+ "finish": "completed",
+ "seconds": 16.9
+}

@@ -1,0 +1,35 @@
+{
+ "gap": "A_join3_star",
+ "seed": 4,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "{\"class\": \"candidate\", \"chokepoint\": [{\"operator\": \"page reads through the async I/O layer (orders, customers, items B-trees)\", \"component\": \"asynchronous I/O layer\", \"frozen\": true, \"why_every_version_executes_it\": \"Every orders row must be visited to evaluate the join, and every page read must pass through the frozen I/O layer.\", \"least_work\": {\"amount\": 4541, \"unit\": \"pages\", \"per_unit_cost_us\": 1.0, \"total_ms\": 4.5, \"calling_context\": \"Warm OS cache. Each page is read once, in sequential batched reads, with the page cache holding all of customers and items.\"}, \"max_cores\": 4}], \"floor_ms\": 4.5, \"L_delta\": -2.92, \"rationale\": \"The only frozen work is about 4,541 page reads, roughly 4.5 ms. That is far below T_R_upper, so no architectural certificate exists. The excess instructions (2.1x SQLite) are in mutable code: SipHash hashing, the hash-join and bloom-filter plan, VDBE stepping, and about 4 ms of start-up. Swapping in a faster hasher alone recovers only about 20%. A SQLite-like plan might close the gap, but that is not demonstrated, so the class is candidate.\"}",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 2381,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1120,
+  "output_tokens_details": {
+   "thinking_tokens": 692
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 12.4
+}

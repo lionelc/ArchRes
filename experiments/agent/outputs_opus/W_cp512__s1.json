@@ -1,0 +1,35 @@
+{
+ "gap": "W_cp512",
+ "seed": 1,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "{\"class\": \"architectural\",\n \"chokepoint\": [\n  {\"operator\": \"fd_read of SRC's 512 MiB into linear memory\",\n   \"component\": \"WASI fd_read\",\n   \"frozen\": true,\n   \"why_every_version_executes_it\": \"Preview1 has no clone, splice or copy call, so every byte of SRC must enter linear memory through fd_read before it can be written.\",\n   \"least_work\": {\"amount\": 536870912, \"unit\": \"bytes\", \"per_unit_cost_us\": 0.000125, \"total_ms\": 67.11,\n                  \"calling_context\": \"Large buffers (1 MiB or more), warm page cache, at the native read() rate of 8 GB/s with zero WASI overhead\"},\n   \"max_cores\": 1},\n  {\"operator\": \"fd_write of 512 MiB from linear memory to DST\",\n   \"component\": \"WASI fd_write\",\n   \"frozen\": true,\n   \"why_every_version_executes_it\": \"DST must end up holding 512 MiB of data, and fd_write is the only path out of linear memory; a hard link is not a copy.\",\n   \"least_work\": {\"amount\": 536870912, \"unit\": \"bytes\", \"per_unit_cost_us\": 0.000125, \"total_ms\": 67.11,\n                  \"calling_context\": \"Large buffers (1 MiB or more), at the native write() rate of 8 GB/s into a new file with zero WASI overhead\"},\n   \"max_cores\": 1}\n ],\n \"floor_ms\": 67.11,\n \"L_delta\": 2.636,\n \"rationale\": \"GNU uses one FICLONE ioctl, and wasip1 has no equivalent. Every admissible Y must fd_read and fd_write all 512 MiB. At 8 GB/s each is 67.1 ms on one core (wasip1 is single-threaded). L = max(134.2/4, 67.1) = 67.1 ms, and ln(67.1/4.81) = 2.64 > 0.236. Mutable fixes such as larger buffers cut the 131k syscalls but cannot go below this floor.\"}",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1348,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1222,
+  "output_tokens_details": {
+   "thinking_tokens": 532
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 11.7
+}

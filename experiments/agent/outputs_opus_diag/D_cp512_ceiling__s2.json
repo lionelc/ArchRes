@@ -1,0 +1,35 @@
+{
+ "gap": "D_cp512_ceiling",
+ "seed": 2,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "{\"class\":\"architectural\",\"chokepoint\":[{\"operator\":\"fd_read of SRC data into linear memory\",\"component\":\"WASI fd_read\",\"frozen\":true,\"why_every_version_executes_it\":\"Preview1 has no clone, splice or copy call, and a hard link is not a copy. All 512 MiB of SRC must therefore enter linear memory through fd_read.\",\"least_work\":{\"amount\":536870912,\"unit\":\"bytes\",\"per_unit_cost_us\":0.000125,\"total_ms\":67.11,\"calling_context\":\"Large buffers at the 8 GB/s envelope maximum, warm page cache.\"},\"max_cores\":1},{\"operator\":\"fd_write of DST data out of linear memory\",\"component\":\"WASI fd_write\",\"frozen\":true,\"why_every_version_executes_it\":\"DST must receive all 512 MiB, and the only way data leaves the program is fd_write. Reflink cloning is not reachable from preview1.\",\"least_work\":{\"amount\":536870912,\"unit\":\"bytes\",\"per_unit_cost_us\":0.000125,\"total_ms\":67.11,\"calling_context\":\"Large buffers at the 8 GB/s envelope maximum.\"},\"max_cores\":1}],\"floor_ms\":67.11,\"L_delta\":2.636,\"rationale\":\"GNU cp clones the file with FICLONE and moves no data. Under preview1, Y must read and write all 512 MiB itself. At the 8 GB/s envelope each direction costs at least 67.1 ms, and a wasip1 program is single-threaded, so each operator gets 1 core. L = max(134.2/4, 67.1) = 67.1 ms. ln(67.1/4.81) = 2.64, which exceeds b = 0.236. No admissible change, including buffer size, avoids moving the data.\"}",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1395,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1010,
+  "output_tokens_details": {
+   "thinking_tokens": 415
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 10.1
+}

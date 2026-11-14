@@ -1,0 +1,18 @@
+model claude-opus-5-5
+thinking {'thinking': {'type': 'adaptive'}, 'output_config': {'effort': 'high'}}
+06:31:02 D_cp512_ceiling s1 991 tok 10s
+06:31:06 D_cp512_noceiling s1 1303 tok 14s
+06:30:59 D_plant_frozen s1 675 tok 7s
+06:30:57 D_plant_mutable s1 477 tok 5s
+06:31:07 D_cp512_ceiling s2 1010 tok 10s
+06:31:11 D_cp512_noceiling s2 994 tok 11s
+06:31:09 D_plant_frozen s2 636 tok 7s
+06:31:13 D_plant_mutable s2 718 tok 7s
+06:31:18 D_cp512_ceiling s3 1027 tok 10s
+06:31:26 D_cp512_noceiling s3 1683 tok 17s
+06:31:18 D_plant_frozen s3 693 tok 7s
+06:31:21 D_plant_mutable s3 738 tok 8s
+06:31:28 D_cp512_ceiling s4 1095 tok 11s
+06:31:42 D_cp512_noceiling s4 2186 tok 24s
+06:31:28 D_plant_frozen s4 658 tok 7s
+06:31:33 D_plant_mutable s4 707 tok 7s

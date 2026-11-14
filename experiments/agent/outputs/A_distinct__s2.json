@@ -1,0 +1,14 @@
+{
+ "gap": "A_distinct",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"op_hash_distinct\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The query plan requires hash distinct operation for count(DISTINCT cust) on orders table.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"call\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1.0,\n        \"calling_context\": \"Fixed data and command with no caching or optimization.\"\n      },\n      \"max_cores\": 4\n    }\n  ],\n  \"floor_ms\": 110.2,\n  \"L_delta\": 3.62,\n  \"rationale\": \"The hash distinct operation in Turso is a frozen component that must execute for this query. Its cost is fixed under admissible changes, making the gap architectural.\"\n}",
+ "usage": {
+  "completion_tokens": 213,
+  "prompt_tokens": 1431,
+  "total_tokens": 1644,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 66.6
+}

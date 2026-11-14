@@ -1,0 +1,35 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 5,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\": \"fixable\",\n \"chokepoint\": [{\"operator\": \"async I/O page reads (orders table scan + customers rowid lookups)\", \"component\": \"asynchronous I/O layer\", \"frozen\": true,\n                 \"why_every_version_executes_it\": \"Every page read passes through the frozen async I/O layer, and the subquery must read the orders table pages\",\n                 \"least_work\": {\"amount\": 4519, \"unit\": \"pages\", \"per_unit_cost_us\": 2.0,\n                                \"total_ms\": 9.0, \"calling_context\": \"warm OS page cache, sequential 4 KB reads, each page read once, rest cached in a mutable page cache\"},\n                 \"max_cores\": 1}],\n \"floor_ms\": 9.0, \"L_delta\": -2.43,\n \"rationale\": \"The frozen I/O floor is about 9 ms, far below 102.6 ms, so there is no certificate. The cost sits in mutable VDBE code: op_column_fetch and Statement::_step take roughly 60% of instructions. Y must drop to about 128 ms, a cut of roughly 7%. Caching decoded record headers or column offsets in op_column_fetch, trimming _step dispatch overhead, or adding a Bloom filter like SQLite's for the IN-list should close this. Start-up overhead (~4.4 ms) is also mutable.\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 2222,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1268,
+  "output_tokens_details": {
+   "thinking_tokens": 811
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 13.1
+}

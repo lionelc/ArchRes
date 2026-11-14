@@ -1,0 +1,28 @@
+{
+ "gap": "A_join3_star",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The profiles primarily implicate mutable execution, hashing, and planning code. Page counts do not establish unavoidable asynchronous-I/O calls or their least cost across all admissible caching and batching contexts. Thus no frozen-operator floor exceeding the band is established. Conversely, no specific admissible change is demonstrated to close the gap. Zero floor/delta fields denote the absence of a certified bound.\"}",
+ "usage": {
+  "input_tokens": 1513,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1510
+  },
+  "output_tokens": 460,
+  "output_tokens_details": {
+   "reasoning_tokens": 353
+  },
+  "total_tokens": 1973
+ },
+ "finish": "completed",
+ "seconds": 11.8
+}

@@ -1,0 +1,14 @@
+{
+ "gap": "W_cp128",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"pread64\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 interface requires fd_read for data transfer\",\n      \"least_work\": {\n        \"amount\": 65536,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 6553.6,\n        \"calling_context\": \"fixed 8 KiB reads and writes\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"pwrite64\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 interface requires fd_write for data transfer\",\n      \"least_work\": {\n        \"amount\": 65536,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 6553.6,\n        \"calling_context\": \"fixed 8 KiB reads and writes\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 13107.2,\n  \"L_delta\": 3.19,\n  \"rationale\": \"The gap is architectural because the WASI interface forces Y to use 65536 pread64 and pwrite64 calls, which are unavoidable under the contract. The floor is higher than R's upper bound, so no admissible change can close the gap.\"\n}",
+ "usage": {
+  "completion_tokens": 362,
+  "prompt_tokens": 955,
+  "total_tokens": 1317,
+  "prompt_tokens_details": {
+   "cached_tokens": 742
+  }
+ },
+ "seconds": 89.0
+}

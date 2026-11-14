@@ -1,0 +1,17 @@
+model gpt-6.1-sol
+06:31:28 D_cp512_ceiling s1 {"input_tokens": 951, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 37s
+06:31:19 D_cp512_noceiling s1 {"input_tokens": 943, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 27s
+06:31:13 D_plant_frozen s1 {"input_tokens": 1012, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 22s
+06:31:14 D_plant_mutable s1 {"input_tokens": 1012, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 22s
+06:31:38 D_cp512_ceiling s2 {"input_tokens": 951, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 25s
+06:31:32 D_cp512_noceiling s2 {"input_tokens": 943, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 18s
+06:31:42 D_plant_frozen s2 {"input_tokens": 1012, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 23s
+06:31:48 D_plant_mutable s2 {"input_tokens": 1012, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 20s
+06:32:01 D_cp512_ceiling s3 {"input_tokens": 951, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 29s
+06:31:55 D_cp512_noceiling s3 {"input_tokens": 943, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 17s
+06:32:03 D_plant_frozen s3 {"input_tokens": 1012, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 22s
+06:32:01 D_plant_mutable s3 {"input_tokens": 1012, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 14s
+06:32:39 D_cp512_ceiling s4 {"input_tokens": 951, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 44s
+06:32:19 D_cp512_noceiling s4 {"input_tokens": 943, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 18s
+06:32:24 D_plant_frozen s4 {"input_tokens": 1012, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 23s
+06:32:20 D_plant_mutable s4 {"input_tokens": 1012, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 17s

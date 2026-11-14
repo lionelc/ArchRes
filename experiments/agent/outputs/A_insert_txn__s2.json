@@ -1,0 +1,14 @@
+{
+ "gap": "A_insert_txn",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"op_insert\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Insert operation is fundamental to transaction processing and must be implemented\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"inserts\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 0.1,\n        \"calling_context\": \"Single insert in transaction\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"op_make_record\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Record creation is required for all insert operations\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"records\",\n        \"per_unit_cost_us\": 150,\n        \"total_ms\": 0.15,\n        \"calling_context\": \"Single record creation\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"insert\",\n      \"component\": \"B-tree code\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"B-tree insertion is required for data storage\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"inserts\",\n        \"per_unit_cost_us\": 200,\n        \"total_ms\": 0.2,\n        \"calling_context\": \"Single insert in B-tree\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 0.45,\n  \"L_delta\": 1.16,\n  \"rationale\": \"The floor is determined by the sum of the least work for the frozen operators. The gap exceeds the band, indicating an architectural issue.\"\n}",
+ "usage": {
+  "completion_tokens": 420,
+  "prompt_tokens": 1411,
+  "total_tokens": 1831,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 115.9
+}

@@ -1,0 +1,14 @@
+{
+ "gap": "A_scan_agg",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"op_agg_step\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Aggregation is required for SUM operation\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1000,\n        \"calling_context\": \"fixed query plan and data\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"op_column_range_fetch\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Column range fetch is required for accessing data\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1000,\n        \"calling_context\": \"fixed query plan and data\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 1000,\n  \"L_delta\": 0.23,\n  \"rationale\": \"The gap is architectural due to the fixed VDBE operations and their inherent cost, which cannot be reduced under the architecture contract.\"\n}",
+ "usage": {
+  "completion_tokens": 311,
+  "prompt_tokens": 1411,
+  "total_tokens": 1722,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 99.2
+}

@@ -1,0 +1,177 @@
+{
+ "cells": {
+  "B_cksum": {
+   "gnu": {
+    "default": {
+     "rc": 0,
+     "stderr": "cksum: using avx512 hardware support"
+    },
+    "KO": {
+     "rc": 0,
+     "stderr": "cksum: avx512 support not detected\ncksum: avx2 support not detected\ncksum: pclmul support not detected"
+    }
+   },
+   "uu12": {
+    "default": {
+     "rc": 0,
+     "stderr": "using avx512 hardware support\nusing avx2 hardware support\nusing pclmul hardware support"
+    },
+    "KO": {
+     "rc": 0,
+     "stderr": "avx512 support not detected\navx2 support not detected\npclmul support not detected"
+    }
+   }
+  },
+  "B_base64": {
+   "gnu": {
+    "default": {
+     "rc": 1,
+     "stderr": "/work/pilot/bin/gnu-9.12/bin/base64: unrecognized option '--debug'\nTry '/work/pilot/bin/gnu-9.12/bin/base64 --help' for more information."
+    },
+    "KO": {
+     "rc": 1,
+     "stderr": "/work/pilot/bin/gnu-9.12/bin/base64: unrecognized option '--debug'\nTry '/work/pilot/bin/gnu-9.12/bin/base64 --help' for more information."
+    }
+   },
+   "uu12": {
+    "default": {
+     "rc": 1,
+     "stderr": "error: unexpected argument '--debug' found\n\n  tip: to pass '--debug' as a value, use '-- --debug'\n\nUsage: base64 [OPTION]... [FILE]\n\nFor more information, try '--help'."
+    },
+    "KO": {
+     "rc": 1,
+     "stderr": "error: unexpected argument '--debug' found\n\n  tip: to pass '--debug' as a value, use '-- --debug'\n\nUsage: base64 [OPTION]... [FILE]\n\nFor more information, try '--help'."
+    }
+   }
+  },
+  "B_sha256sum": {
+   "gnu": {
+    "default": {
+     "rc": 1,
+     "stderr": "/work/pilot/bin/gnu-9.12/bin/sha256sum: unrecognized option '--debug'\nTry '/work/pilot/bin/gnu-9.12/bin/sha256sum --help' for more information."
+    },
+    "KO": {
+     "rc": 1,
+     "stderr": "/work/pilot/bin/gnu-9.12/bin/sha256sum: unrecognized option '--debug'\nTry '/work/pilot/bin/gnu-9.12/bin/sha256sum --help' for more information."
+    }
+   },
+   "uu12": {
+    "default": {
+     "rc": 1,
+     "stderr": "error: unexpected argument '--debug' found\n\n  tip: to pass '--debug' as a value, use '-- --debug'\n\nUsage: sha256sum [OPTIONS] [FILE]...\n\nFor more information, try '--help'."
+    },
+    "KO": {
+     "rc": 1,
+     "stderr": "error: unexpected argument '--debug' found\n\n  tip: to pass '--debug' as a value, use '-- --debug'\n\nUsage: sha256sum [OPTIONS] [FILE]...\n\nFor more information, try '--help'."
+    }
+   }
+  },
+  "B_md5sum": {
+   "gnu": {
+    "default": {
+     "rc": 1,
+     "stderr": "/work/pilot/bin/gnu-9.12/bin/md5sum: unrecognized option '--debug'\nTry '/work/pilot/bin/gnu-9.12/bin/md5sum --help' for more information."
+    },
+    "KO": {
+     "rc": 1,
+     "stderr": "/work/pilot/bin/gnu-9.12/bin/md5sum: unrecognized option '--debug'\nTry '/work/pilot/bin/gnu-9.12/bin/md5sum --help' for more information."
+    }
+   },
+   "uu12": {
+    "default": {
+     "rc": 1,
+     "stderr": "error: unexpected argument '--debug' found\n\n  tip: to pass '--debug' as a value, use '-- --debug'\n\nUsage: md5sum [OPTIONS] [FILE]...\n\nFor more information, try '--help'."
+    },
+    "KO": {
+     "rc": 1,
+     "stderr": "error: unexpected argument '--debug' found\n\n  tip: to pass '--debug' as a value, use '-- --debug'\n\nUsage: md5sum [OPTIONS] [FILE]...\n\nFor more information, try '--help'."
+    }
+   }
+  },
+  "B_b2sum": {
+   "gnu": {
+    "default": {
+     "rc": 1,
+     "stderr": "/work/pilot/bin/gnu-9.12/bin/b2sum: unrecognized option '--debug'\nTry '/work/pilot/bin/gnu-9.12/bin/b2sum --help' for more information."
+    },
+    "KO": {
+     "rc": 1,
+     "stderr": "/work/pilot/bin/gnu-9.12/bin/b2sum: unrecognized option '--debug'\nTry '/work/pilot/bin/gnu-9.12/bin/b2sum --help' for more information."
+    }
+   },
+   "uu12": {
+    "default": {
+     "rc": 1,
+     "stderr": "error: unexpected argument '--debug' found\n\n  tip: to pass '--debug' as a value, use '-- --debug'\n\nUsage: b2sum [OPTIONS] [FILE]...\n\nFor more information, try '--help'."
+    },
+    "KO": {
+     "rc": 1,
+     "stderr": "error: unexpected argument '--debug' found\n\n  tip: to pass '--debug' as a value, use '-- --debug'\n\nUsage: b2sum [OPTIONS] [FILE]...\n\nFor more information, try '--help'."
+    }
+   }
+  },
+  "B_wc_l": {
+   "gnu": {
+    "default": {
+     "rc": 0,
+     "stderr": "wc: using avx512 hardware support"
+    },
+    "KO": {
+     "rc": 0,
+     "stderr": "wc: avx512 support not detected\nwc: avx2 support not detected"
+    }
+   },
+   "uu12": {
+    "default": {
+     "rc": 0,
+     "stderr": "debug: using hardware support (features: AVX2, SSE2)"
+    },
+    "KO": {
+     "rc": 0,
+     "stderr": "debug: hardware support disabled by GLIBC_TUNABLES (AVX512F, AVX2)"
+    }
+   }
+  },
+  "B_wc_w": {
+   "gnu": {
+    "default": {
+     "rc": 0,
+     "stderr": ""
+    },
+    "KO": {
+     "rc": 0,
+     "stderr": ""
+    }
+   },
+   "uu12": {
+    "default": {
+     "rc": 0,
+     "stderr": "debug: using hardware support (features: AVX2, SSE2)"
+    },
+    "KO": {
+     "rc": 0,
+     "stderr": "debug: hardware support disabled by GLIBC_TUNABLES (AVX512F, AVX2)"
+    }
+   }
+  }
+ },
+ "gnu_accelerated_cells": [
+  "B_cksum",
+  "B_wc_l"
+ ],
+ "B5": {
+  "gnu": {
+   "cells_with_feature_in_use": [
+    "B_cksum",
+    "B_wc_l"
+   ],
+   "KO_switches_all": true
+  },
+  "uu12": {
+   "cells_with_feature_in_use": [
+    "B_cksum"
+   ],
+   "KO_switches_all": true
+  }
+ }
+}

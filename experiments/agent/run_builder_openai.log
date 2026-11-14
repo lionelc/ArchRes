@@ -1,0 +1,41 @@
+model gpt-6.1-sol
+05:18:16 A_distinct s1 {"input_tokens": 1382, "input_tokens_details": {"cache_write_tokens": 1379, "cache_write_tokens_details": {"ttl_12h_toke 19s
+05:18:16 A_in_subquery s1 {"input_tokens": 1419, "input_tokens_details": {"cache_write_tokens": 1416, "cache_write_tokens_details": {"ttl_12h_toke 19s
+05:18:11 A_insert_txn s1 {"input_tokens": 1363, "input_tokens_details": {"cache_write_tokens": 1360, "cache_write_tokens_details": {"ttl_12h_toke 14s
+05:18:12 A_join3_star s1 {"input_tokens": 1513, "input_tokens_details": {"cached_tokens": 0, "cache_write_tokens": 1510, "cache_write_tokens_deta 15s
+05:18:38 A_like s1 {"input_tokens": 1372, "input_tokens_details": {"cache_write_tokens": 1369, "cache_write_tokens_details": {"ttl_12h_toke 26s
+05:18:30 A_order_limit s1 {"input_tokens": 1398, "input_tokens_details": {"cache_write_tokens": 1395, "cache_write_tokens_details": {"ttl_12h_toke 19s
+05:18:37 A_point_index s1 {"input_tokens": 1342, "input_tokens_details": {"cache_write_tokens": 1339, "cache_write_tokens_details": {"ttl_12h_toke 22s
+05:18:32 A_point_rowid s1 {"input_tokens": 1328, "input_tokens_details": {"cache_write_tokens": 1325, "cache_write_tokens_details": {"ttl_12h_toke 16s
+05:18:50 A_scan_agg s1 {"input_tokens": 1359, "input_tokens_details": {"cache_write_tokens": 1356, "cache_write_tokens_details": {"ttl_12h_toke 20s
+05:18:47 A_startup s1 {"input_tokens": 1293, "input_tokens_details": {"cache_write_tokens": 1290, "cache_write_tokens_details": {"ttl_12h_toke 15s
+05:19:04 B_basename s1 {"input_tokens": 753, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 27s
+05:18:56 B_cat s1 {"input_tokens": 764, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 19s
+05:19:03 B_cksum s1 {"input_tokens": 792, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 15s
+05:19:24 B_true s1 {"input_tokens": 749, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 34s
+05:19:13 B_wc_l s1 {"input_tokens": 787, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 16s
+05:19:16 B_wc_m s1 {"input_tokens": 761, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 14s
+05:19:37 P_sort_frozen_plant s1 {"input_tokens": 984, "input_tokens_details": {"cached_tokens": 0, "cache_write_tokens": 0, "cache_write_tokens_details" 33s
+05:19:32 W_cksum32 s1 {"input_tokens": 877, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 19s
+05:19:38 W_cp128 s1 {"input_tokens": 919, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 22s
+05:19:51 W_cp512 s1 {"input_tokens": 919, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 26s
+05:19:50 A_distinct s2 {"input_tokens": 1382, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 18s
+05:19:53 A_in_subquery s2 {"input_tokens": 1419, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 16s
+05:19:49 A_insert_txn s2 {"input_tokens": 1363, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 11s
+05:20:01 A_join3_star s2 {"input_tokens": 1513, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 12s
+05:20:07 A_like s2 {"input_tokens": 1372, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 18s
+05:20:05 A_order_limit s2 {"input_tokens": 1398, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 14s
+05:20:08 A_point_index s2 {"input_tokens": 1342, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 15s
+05:20:14 A_point_rowid s2 {"input_tokens": 1328, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 13s
+05:20:19 A_scan_agg s2 {"input_tokens": 1359, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 14s
+05:20:31 A_startup s2 {"input_tokens": 1293, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens" 23s
+05:20:19 B_basename s2 {"input_tokens": 753, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 11s
+05:20:36 B_cat s2 {"input_tokens": 764, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 22s
+05:20:35 B_cksum s2 {"input_tokens": 792, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 16s
+05:20:51 B_true s2 {"input_tokens": 749, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 32s
+05:20:51 B_wc_l s2 {"input_tokens": 787, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 20s
+05:20:49 B_wc_m s2 {"input_tokens": 761, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 15s
+05:21:04 P_sort_frozen_plant s2 {"input_tokens": 984, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 28s
+05:21:05 W_cksum32 s2 {"input_tokens": 877, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 15s
+05:21:15 W_cp128 s2 {"input_tokens": 919, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 24s
+05:21:16 W_cp512 s2 {"input_tokens": 919, "input_tokens_details": {"cache_write_tokens": 0, "cache_write_tokens_details": {"ttl_12h_tokens": 25s

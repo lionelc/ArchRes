@@ -1,0 +1,14 @@
+{
+ "gap": "W_cp128",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"pread64\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 interface requires fd_read for data transfer\",\n      \"least_work\": {\n        \"amount\": 16384,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 1638.4,\n        \"calling_context\": \"fixed 8 KiB reads\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"pwrite64\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 interface requires fd_write for data transfer\",\n      \"least_work\": {\n        \"amount\": 16384,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 1638.4,\n        \"calling_context\": \"fixed 8 KiB writes\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 3276.8,\n  \"L_delta\": 3.19,\n  \"rationale\": \"The gap is architectural due to the high number of pread64 and pwrite64 calls in WebAssembly, which cannot be optimized under the frozen WASI interface constraints.\"\n}",
+ "usage": {
+  "completion_tokens": 336,
+  "prompt_tokens": 955,
+  "total_tokens": 1291,
+  "prompt_tokens_details": {
+   "cached_tokens": 743
+  }
+ },
+ "seconds": 82.2
+}

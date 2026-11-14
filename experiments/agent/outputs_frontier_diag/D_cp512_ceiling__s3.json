@@ -1,0 +1,28 @@
+{
+ "gap": "D_cp512_ceiling",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"Read SRC file data through fd_read\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Copying SRC requires reading its 512 MiB through the only admitted file-data input interface; no clone or file-copy interface is available.\",\n      \"least_work\": {\n        \"amount\": 536870912,\n        \"unit\": \"bytes\",\n        \"per_unit_cost_us\": 0.000125,\n        \"total_ms\": 67.108864,\n        \"calling_context\": \"Any admissible buffering, batching, caching, ordering, or runtime settings; the given envelope caps throughput at 8 GB/s.\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"Write DST file data through fd_write\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Creating the independent 512 MiB copy requires output through fd_write; cloning and other file-copy interfaces are unavailable, and hard linking is disallowed.\",\n      \"least_work\": {\n        \"amount\": 536870912,\n        \"unit\": \"bytes\",\n        \"per_unit_cost_us\": 0.000125,\n        \"total_ms\": 67.108864,\n        \"calling_context\": \"Any admissible buffering, batching, caching, ordering, or runtime settings; the given envelope caps throughput at 8 GB/s.\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 67.108864,\n  \"L_delta\": 2.635619,\n  \"rationale\": \"Each mandatory transfer costs at least 67.109 ms. The prescribed floor is max(134.218/4, 67.109/1, 67.109/1) = 67.109 ms. Thus ln(L/4.81) = 2.636 exceeds b = 0.236. Mutable utility code, larger buffers, and runtime tuning cannot eliminate the frozen data-transfer requirements or exceed the given throughput envelope.\"\n}",
+ "usage": {
+  "input_tokens": 951,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1363,
+  "output_tokens_details": {
+   "reasoning_tokens": 895
+  },
+  "total_tokens": 2314
+ },
+ "finish": "completed",
+ "seconds": 29.4
+}

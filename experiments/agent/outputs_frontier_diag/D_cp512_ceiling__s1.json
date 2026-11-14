@@ -1,0 +1,28 @@
+{
+ "gap": "D_cp512_ceiling",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"fd_read of source file data\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Copying the source requires reading its data into linear memory; the frozen interface provides no file-copy or clone operation.\",\n      \"least_work\": {\n        \"amount\": 536870912,\n        \"unit\": \"bytes\",\n        \"per_unit_cost_us\": 0.000125,\n        \"total_ms\": 67.108864,\n        \"calling_context\": \"Best admissible batching, buffering, caching, ordering and settings, bounded by the given 8 GB/s envelope.\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"fd_write of destination file data\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Creating the independent destination copy requires writing the file data from linear memory; cloning, splicing and hard-link substitution are unavailable.\",\n      \"least_work\": {\n        \"amount\": 536870912,\n        \"unit\": \"bytes\",\n        \"per_unit_cost_us\": 0.000125,\n        \"total_ms\": 67.108864,\n        \"calling_context\": \"Best admissible batching, buffering, caching, ordering and settings, bounded by the given 8 GB/s envelope.\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 67.108864,\n  \"L_delta\": 2.635619,\n  \"rationale\": \"Using decimal GB, each mandatory direction costs at least 67.108864 ms. The prescribed floor is max(134.217728/4, 67.108864/1) = 67.108864 ms. Thus ln(L/4.81) = 2.635619 > 0.236. This conservative certificate counts no mutable-code costs and does not assume the default 8 KiB buffers or syscall counts persist.\"\n}",
+ "usage": {
+  "input_tokens": 951,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1201,
+  "output_tokens_details": {
+   "reasoning_tokens": 751
+  },
+  "total_tokens": 2152
+ },
+ "finish": "completed",
+ "seconds": 36.6
+}

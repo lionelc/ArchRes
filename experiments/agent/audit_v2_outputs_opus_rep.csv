@@ -1,0 +1,51 @@
+gap,seed,class,operator,component,kind,total_ms,amount,unit,err_i,err_ii,err_iii,err_iv
+A_distinct,5,fixable,async I/O page reads of orders_cust,asynchronous I/O layer,frozen,0.365,730.0,pages,False,True,False,False
+A_in_subquery,3,candidate,page reads through asynchronous I/O layer (orders table scan plus customers rowid probes),asynchronous I/O layer,frozen,6.8,4519.0,pages,False,False,False,False
+A_in_subquery,5,fixable,async I/O page reads (orders table scan + customers rowid lookups),asynchronous I/O layer,frozen,9.0,4519.0,pages,False,False,False,False
+A_in_subquery,6,candidate,async I/O page reads (orders scan + customers lookups),asynchronous I/O layer,frozen,4.5,4519.0,pages,False,False,False,False
+A_join3_star,3,candidate,"page reads through the async I/O layer (orders, customers, items B-trees)",asynchronous I/O layer,frozen,4.5,4541.0,pages,False,False,False,False
+A_join3_star,4,candidate,"page reads through the async I/O layer (orders, customers, items B-trees)",asynchronous I/O layer,frozen,4.5,4541.0,pages,False,False,False,False
+A_join3_star,5,candidate,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,9.1,4541.0,pages,False,False,False,False
+A_join3_star,6,candidate,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,4.5,4541.0,pages,False,False,False,False
+A_like,3,fixable,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,2.2,4394.0,pages,False,False,False,False
+A_like,4,fixable,async I/O page read of orders table B-tree,asynchronous I/O layer,frozen,4.4,4394.0,pages,False,False,False,False
+A_like,6,fixable,asynchronous I/O page reads of orders table B-tree,asynchronous I/O layer,frozen,13.2,26364.0,pages,False,True,False,False
+A_order_limit,3,fixable,page reads of orders table B-tree via async I/O,asynchronous I/O layer,frozen,8.8,4394.0,pages,False,False,False,False
+A_order_limit,4,fixable,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,65.9,65910.0,pages,False,True,False,False
+A_order_limit,5,candidate,page read of orders table B-tree through the async I/O layer,asynchronous I/O layer,frozen,8.8,4394.0,pages,False,False,False,False
+A_order_limit,6,candidate,async I/O page read (orders table B-tree),asynchronous I/O layer,frozen,4.4,4394.0,pages,False,False,False,False
+A_point_index,3,candidate,page read through asynchronous I/O layer,asynchronous I/O layer,frozen,0.61,610.0,pages,False,True,False,False
+A_point_index,4,candidate,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,0.6,605.0,pages,False,True,False,False
+A_point_index,6,candidate,asynchronous I/O layer page reads (orders_cust index and schema pages),asynchronous I/O layer,frozen,0.6,604.0,pages,False,True,False,False
+A_point_rowid,3,candidate,page reads through the async I/O layer,asynchronous I/O layer,frozen,2.0,2000.0,pages,False,True,False,False
+A_point_rowid,5,candidate,page read through the asynchronous I/O layer,asynchronous I/O layer,frozen,0.003,3.0,pages,False,False,False,False
+A_scan_agg,3,fixable,async I/O page read of the orders table B-tree,asynchronous I/O layer,frozen,4.4,4394.0,pages,False,False,False,False
+A_scan_agg,4,candidate,async I/O page reads of orders table,asynchronous I/O layer,frozen,4.4,4394.0,pages,False,False,False,False
+A_scan_agg,5,candidate,asynchronous I/O page reads of the orders table B-tree,asynchronous I/O layer,frozen,2.2,4394.0,pages,False,False,False,False
+A_startup,4,candidate,async I/O read of database header page (page 1) and WAL header on open,asynchronous I/O layer,frozen,0.01,2.0,calls,False,False,False,True
+A_startup,5,fixable,async I/O read of schema page (page 1),asynchronous I/O layer,frozen,0.005,1.0,pages,False,False,False,True
+A_startup,6,candidate,read of database header page (page 1) through async I/O layer,asynchronous I/O layer,frozen,0.01,1.0,pages,False,False,False,True
+P_sort_frozen_plant,3,architectural,gapcr_plant constructor (busy-wait),preloaded constructor F,frozen,84.284,84284.0,microseconds of wall-clock busy-wait,False,False,False,True
+P_sort_frozen_plant,4,architectural,gapcr_plant constructor busy-wait,preloaded constructor F,frozen,84.284,84284.0,microseconds of wall-clock busy-wait,False,False,False,True
+P_sort_frozen_plant,5,architectural,gapcr_plant constructor busy-wait,preloaded constructor F,frozen,84.284,84284.0,microseconds of wall-time busy-wait,False,True,False,False
+P_sort_frozen_plant,6,architectural,gapcr_plant constructor busy-wait,preloaded constructor F,frozen,84.284,84284.0,microseconds of wall-clock busy-wait,False,False,False,True
+W_cksum32,3,candidate,WASI fd_read of the 32 MiB file into linear memory,WASI fd_read,frozen,4.19,33554432.0,bytes,False,False,False,False
+W_cksum32,4,candidate,WASI fd_read of the 32 MiB input,WASI fd_read,frozen,4.19,33554432.0,bytes,False,False,False,False
+W_cksum32,5,candidate,WASI fd_read of the 32 MiB file into linear memory,WASI fd_read,frozen,4.19,33554432.0,bytes,False,False,False,False
+W_cksum32,6,candidate,fd_read of the 32 MiB file into linear memory,WASI fd_read,frozen,4.19,33554432.0,bytes,False,False,False,False
+W_cp128,3,architectural,fd_read of SRC data into linear memory,WASI fd_read,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp128,3,architectural,fd_write of data to DST from linear memory,WASI fd_write,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp128,4,architectural,fd_read of all SRC data into linear memory,WASI fd_read,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp128,4,architectural,fd_write of all DST data out of linear memory,WASI fd_write,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp128,5,architectural,WASI fd_read of SRC into linear memory,WASI fd_read,frozen,16.78,134217728.0,bytes,True,False,False,False
+W_cp128,5,architectural,WASI fd_write of DST from linear memory,WASI fd_write,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp128,6,architectural,fd_read of the 128 MiB source into linear memory,WASI fd_read,frozen,16.78,134217728.0,bytes,True,False,False,False
+W_cp128,6,architectural,fd_write of the 128 MiB from linear memory into DST,WASI fd_write,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp512,3,architectural,"fd_read of all 536,870,912 source bytes into linear memory",WASI fd_read,frozen,67.1,536870912.0,bytes,True,False,False,False
+W_cp512,3,architectural,"fd_write of all 536,870,912 bytes from linear memory to DST",WASI fd_write,frozen,67.1,536870912.0,bytes,False,False,False,False
+W_cp512,4,architectural,WASI fd_read of SRC data into linear memory,WASI fd_read,frozen,67.11,536870912.0,bytes,False,False,False,False
+W_cp512,4,architectural,WASI fd_write of data to DST,WASI fd_write,frozen,67.11,536870912.0,bytes,False,False,False,False
+W_cp512,5,architectural,WASI fd_read of all SRC bytes into linear memory,WASI fd_read,frozen,67.11,536870912.0,bytes,False,False,False,False
+W_cp512,5,architectural,WASI fd_write of all bytes from linear memory to DST,WASI fd_write,frozen,67.11,536870912.0,bytes,False,False,False,False
+W_cp512,6,architectural,fd_read of SRC data into linear memory,WASI fd_read,frozen,67.11,536870912.0,bytes,False,False,False,False
+W_cp512,6,architectural,fd_write of DST data out of linear memory,WASI fd_write,frozen,67.11,536870912.0,bytes,False,False,False,False

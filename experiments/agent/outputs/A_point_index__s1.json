@@ -1,0 +1,14 @@
+{
+ "gap": "A_point_index",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"SEARCH orders USING COVERING INDEX orders_cust (cust=?)\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite file format and SQL semantics are frozen, so the query plan must use the orders_cust index for this query\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"query\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1.0,\n        \"calling_context\": \"fixed data and command\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"mi_heap_malloc_aligned_at\",\n      \"component\": \"asynchronous I/O layer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The asynchronous I/O layer is frozen, so memory allocation for I/O operations is fixed\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"allocation\",\n        \"per_unit_cost_us\": 500,\n        \"total_ms\": 0.5,\n        \"calling_context\": \"fixed data and command\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 1.5,\n  \"L_delta\": 0.90,\n  \"rationale\": \"The floor is determined by the least work of the frozen operators. The gap between Turso and SQLite is larger than the band, indicating an architectural gap.\"\n}",
+ "usage": {
+  "completion_tokens": 339,
+  "prompt_tokens": 1387,
+  "total_tokens": 1726,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 97.7
+}

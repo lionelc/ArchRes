@@ -1,0 +1,35 @@
+{
+ "gap": "D_cp512_ceiling",
+ "seed": 4,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "{\"class\":\"architectural\",\"chokepoint\":[{\"operator\":\"fd_read of SRC file data into linear memory\",\"component\":\"WASI fd_read\",\"frozen\":true,\"why_every_version_executes_it\":\"Preview1 has no clone, splice or copy call, and a hard link is not a copy, so all 512 MiB of SRC must enter linear memory via fd_read.\",\"least_work\":{\"amount\":536870912,\"unit\":\"bytes\",\"per_unit_cost_us\":0.000125,\"total_ms\":67.109,\"calling_context\":\"any batch or buffer size; envelope premise caps fd_read at 8 GB/s\"},\"max_cores\":1},{\"operator\":\"fd_write of file data from linear memory into DST\",\"component\":\"WASI fd_write\",\"frozen\":true,\"why_every_version_executes_it\":\"DST must end up holding all 512 MiB, and the only admissible path out of linear memory into a file is fd_write.\",\"least_work\":{\"amount\":536870912,\"unit\":\"bytes\",\"per_unit_cost_us\":0.000125,\"total_ms\":67.109,\"calling_context\":\"any batch or buffer size; envelope premise caps fd_write at 8 GB/s\"},\"max_cores\":1}],\"floor_ms\":67.109,\"L_delta\":2.636,\"rationale\":\"GNU copies with a single FICLONE reflink, which preview1 cannot express. Any admissible Y must read and write 512 MiB each through fd_read and fd_write at no more than 8 GB/s, about 67.1 ms per operator. wasip1 is single-threaded, so each operator gets one core. L = max(134.2/4, 67.1) = 67.1 ms. ln(67.1/4.81) = 2.64, which exceeds b = 0.236, so the gap is architectural.\"}",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1395,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1095,
+  "output_tokens_details": {
+   "thinking_tokens": 506
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 10.6
+}

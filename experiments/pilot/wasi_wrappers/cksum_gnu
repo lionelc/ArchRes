@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /work/pilot/bin/gnu-9.12/bin/cksum "$1"

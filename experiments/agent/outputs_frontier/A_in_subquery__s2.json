@@ -1,0 +1,28 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"No floor is certified; numeric zeros are placeholders. The profile primarily identifies mutable VDBE and statement-execution costs. No minimum cost is established for frozen asynchronous I/O under arbitrary admissible caching, batching, and ordering. Current plans and timings do not establish an architectural lower bound, nor demonstrate a specific admissible change that closes the gap.\"\n}",
+ "usage": {
+  "input_tokens": 1419,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1416
+  },
+  "output_tokens": 630,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 2049
+ },
+ "finish": "completed",
+ "seconds": 15.8
+}

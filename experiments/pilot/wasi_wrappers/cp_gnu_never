@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -f "$1.out_k"
+exec /work/pilot/bin/gnu-9.12/bin/cp --reflink=never "$1" "$1.out_k"

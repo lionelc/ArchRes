@@ -1,0 +1,28 @@
+{
+ "gap": "A_point_rowid",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No certified floor is available; numeric zeros denote no floor. The frozen asynchronous I/O layer has neither a demonstrated unavoidable call count under arbitrary caching nor minimum call costs. The file format and SQL semantics supply no quantified execution-time lower bound. Allocation, copying, parsing, startup, and rowid traversal are mutable. Profiles suggest optimization opportunities but do not establish an admissible change that closes the gap.\"}",
+ "usage": {
+  "input_tokens": 1328,
+  "input_tokens_details": {
+   "cache_write_tokens": 1325,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1325
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 333,
+  "output_tokens_details": {
+   "reasoning_tokens": 223
+  },
+  "total_tokens": 1661
+ },
+ "finish": "completed",
+ "seconds": 16.1
+}

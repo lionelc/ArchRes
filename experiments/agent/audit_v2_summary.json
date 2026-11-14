@@ -1,0 +1,3855 @@
+{
+ "outputs": {
+  "summary": {
+   "outputs": 40,
+   "parsed": 40,
+   "premises": 51,
+   "classes": {
+    "architectural": 28,
+    "candidate": 2,
+    "fixable": 10
+   },
+   "type_i": {
+    "premises": 0,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.07
+    ]
+   },
+   "type_ii": {
+    "premises": 2,
+    "rate": 0.039,
+    "ci95": [
+     0.005,
+     0.135
+    ]
+   },
+   "type_iii": {
+    "premises": 32,
+    "rate": 0.627,
+    "ci95": [
+     0.481,
+     0.759
+    ]
+   },
+   "type_iv": {
+    "premises": 14,
+    "rate": 0.275,
+    "ci95": [
+     0.159,
+     0.417
+    ]
+   },
+   "type_v_outputs": {
+    "outputs": 0,
+    "rate": 0.0
+   },
+   "unsupported_architectural": {
+    "k": 24,
+    "n": 36,
+    "rate": 0.667,
+    "ci95": [
+     0.49,
+     0.814
+    ],
+    "with_a_premise_error": 24
+   },
+   "architectural_found": {
+    "k": 4,
+    "n": 4
+   },
+   "valid_certificates": {
+    "k": 0,
+    "n": 4
+   }
+  },
+  "outputs": [
+   {
+    "gap": "A_distinct",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 3,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 3,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii",
+     "iv"
+    ],
+    "n_premises": 4,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii",
+     "iv"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii",
+     "iv"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii",
+     "iv"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "iii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "ii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "architectural",
+    "errors": [
+     "ii"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": false
+   }
+  ]
+ },
+ "outputs_frontier": {
+  "summary": {
+   "outputs": 40,
+   "parsed": 40,
+   "premises": 0,
+   "classes": {
+    "architectural": 0,
+    "candidate": 38,
+    "fixable": 2
+   },
+   "type_i": {
+    "premises": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "type_ii": {
+    "premises": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "type_iii": {
+    "premises": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "type_iv": {
+    "premises": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "type_v_outputs": {
+    "outputs": 0,
+    "rate": 0.0
+   },
+   "unsupported_architectural": {
+    "k": 0,
+    "n": 36,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.097
+    ],
+    "with_a_premise_error": 0
+   },
+   "architectural_found": {
+    "k": 0,
+    "n": 4
+   },
+   "valid_certificates": {
+    "k": 0,
+    "n": 4
+   }
+  },
+  "outputs": [
+   {
+    "gap": "A_distinct",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   }
+  ]
+ },
+ "outputs_opus": {
+  "summary": {
+   "outputs": 40,
+   "parsed": 40,
+   "premises": 29,
+   "classes": {
+    "architectural": 6,
+    "candidate": 13,
+    "fixable": 21
+   },
+   "type_i": {
+    "premises": 0,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.119
+    ]
+   },
+   "type_ii": {
+    "premises": 3,
+    "rate": 0.103,
+    "ci95": [
+     0.022,
+     0.274
+    ]
+   },
+   "type_iii": {
+    "premises": 0,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.119
+    ]
+   },
+   "type_iv": {
+    "premises": 2,
+    "rate": 0.069,
+    "ci95": [
+     0.008,
+     0.228
+    ]
+   },
+   "type_v_outputs": {
+    "outputs": 17,
+    "rate": 0.425
+   },
+   "unsupported_architectural": {
+    "k": 2,
+    "n": 36,
+    "rate": 0.056,
+    "ci95": [
+     0.007,
+     0.187
+    ],
+    "with_a_premise_error": 2
+   },
+   "architectural_found": {
+    "k": 4,
+    "n": 4
+   },
+   "valid_certificates": {
+    "k": 4,
+    "n": 4
+   }
+  },
+  "outputs": [
+   {
+    "gap": "A_distinct",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "iv",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "architectural",
+    "errors": [
+     "ii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 1,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 2,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   }
+  ]
+ },
+ "outputs_frontier_rep": {
+  "summary": {
+   "outputs": 80,
+   "parsed": 80,
+   "premises": 0,
+   "classes": {
+    "architectural": 0,
+    "candidate": 74,
+    "fixable": 6
+   },
+   "type_i": {
+    "premises": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "type_ii": {
+    "premises": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "type_iii": {
+    "premises": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "type_iv": {
+    "premises": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "type_v_outputs": {
+    "outputs": 0,
+    "rate": 0.0
+   },
+   "unsupported_architectural": {
+    "k": 0,
+    "n": 72,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.05
+    ],
+    "with_a_premise_error": 0
+   },
+   "architectural_found": {
+    "k": 0,
+    "n": 8
+   },
+   "valid_certificates": {
+    "k": 0,
+    "n": 8
+   }
+  },
+  "outputs": [
+   {
+    "gap": "A_distinct",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   }
+  ]
+ },
+ "outputs_opus_rep": {
+  "summary": {
+   "outputs": 80,
+   "parsed": 80,
+   "premises": 50,
+   "classes": {
+    "architectural": 12,
+    "candidate": 31,
+    "fixable": 37
+   },
+   "type_i": {
+    "premises": 3,
+    "rate": 0.06,
+    "ci95": [
+     0.013,
+     0.165
+    ]
+   },
+   "type_ii": {
+    "premises": 8,
+    "rate": 0.16,
+    "ci95": [
+     0.072,
+     0.291
+    ]
+   },
+   "type_iii": {
+    "premises": 0,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.071
+    ]
+   },
+   "type_iv": {
+    "premises": 6,
+    "rate": 0.12,
+    "ci95": [
+     0.045,
+     0.243
+    ]
+   },
+   "type_v_outputs": {
+    "outputs": 26,
+    "rate": 0.325
+   },
+   "unsupported_architectural": {
+    "k": 4,
+    "n": 72,
+    "rate": 0.056,
+    "ci95": [
+     0.015,
+     0.136
+    ],
+    "with_a_premise_error": 4
+   },
+   "architectural_found": {
+    "k": 8,
+    "n": 8
+   },
+   "valid_certificates": {
+    "k": 5,
+    "n": 8
+   }
+  },
+  "outputs": [
+   {
+    "gap": "A_distinct",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_distinct",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_in_subquery",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_insert_txn",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_join3_star",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_like",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_order_limit",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_index",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "ii",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_point_rowid",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_scan_agg",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "iv",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [
+     "iv",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "A_startup",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [
+     "iv",
+     "v"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_basename",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cat",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_cksum",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_true",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_l",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "fixable",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "B_wc_m",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 0,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "architectural",
+    "errors": [
+     "ii"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "P_sort_frozen_plant",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "fixable",
+    "class": "architectural",
+    "errors": [
+     "iv"
+    ],
+    "n_premises": 1,
+    "unsupported_architectural": true,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cksum32",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "candidate",
+    "class": "candidate",
+    "errors": [],
+    "n_premises": 1,
+    "unsupported_architectural": false,
+    "architectural_found": false,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [
+     "i"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp128",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [
+     "i"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 3,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [
+     "i"
+    ],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": false
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 4,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 5,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   },
+   {
+    "gap": "W_cp512",
+    "seed": 6,
+    "parsed": true,
+    "truth_class": "architectural",
+    "class": "architectural",
+    "errors": [],
+    "n_premises": 2,
+    "unsupported_architectural": false,
+    "architectural_found": true,
+    "valid_certificate": true
+   }
+  ]
+ }
+}

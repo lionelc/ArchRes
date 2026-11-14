@@ -1,0 +1,14 @@
+{
+ "gap": "A_insert_txn",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"op_insert\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The VDBE is frozen by the contract, so every version of Turso must execute this operator for inserts.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"inserts\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 100,\n        \"calling_context\": \"Single insert operation with no parallelism\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"op_make_record\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The VDBE is frozen by the contract, so every version of Turso must execute this operator for record creation.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"records\",\n        \"per_unit_cost_us\": 50,\n        \"total_ms\": 50,\n        \"calling_context\": \"Single record creation with no parallelism\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"insert\",\n      \"component\": \"B-tree code\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The B-tree code is frozen by the contract, so every version of Turso must execute this operator for data insertion.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"inserts\",\n        \"per_unit_cost_us\": 150,\n        \"total_ms\": 150,\n        \"calling_context\": \"Single insert operation with no parallelism\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 200,\n  \"L_delta\": 1.16,\n  \"rationale\": \"The gap is architectural due to frozen components that must be executed, leading to higher least work costs compared to the reference. The floor calculation shows the gap exceeds the band.\"\n}",
+ "usage": {
+  "completion_tokens": 473,
+  "prompt_tokens": 1411,
+  "total_tokens": 1884,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 134.3
+}

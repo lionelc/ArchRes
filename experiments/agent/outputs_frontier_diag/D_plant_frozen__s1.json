@@ -1,0 +1,28 @@
+{
+ "gap": "D_plant_frozen",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"gapcr_plant\",\n      \"component\": \"preloaded constructor F\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The contract requires this frozen constructor to run once per invocation with GAPCR_PLANT_US=84284.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 84284,\n        \"total_ms\": 84.284,\n        \"calling_context\": \"A single-threaded wait for at least 84284 microseconds of monotonic wall time; batching, caching, buffering, ordering, and utility settings cannot shorten it.\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 84.284,\n  \"L_delta\": 0.5322,\n  \"rationale\": \"The mandatory frozen wait alone gives L = max(84.284/4, 84.284/1) = 84.284 ms. Thus ln(L/49.5) = 0.5322 > b = 0.236. This exceeds the allowed band even if all mutable work costs zero.\"\n}",
+ "usage": {
+  "input_tokens": 1012,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 578,
+  "output_tokens_details": {
+   "reasoning_tokens": 306
+  },
+  "total_tokens": 1590
+ },
+ "finish": "completed",
+ "seconds": 21.6
+}

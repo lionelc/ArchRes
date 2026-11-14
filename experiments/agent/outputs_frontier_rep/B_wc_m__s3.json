@@ -1,0 +1,28 @@
+{
+ "gap": "B_wc_m",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"No component is frozen, so C1 cannot be established. Neither pure Rust nor multicall packaging makes the measured startup or counting costs unavoidable. Dispatch, linking, dependencies, and counting code may all change. However, the supplied evidence does not demonstrate a specific change reaching the approximately 1.67 ms target. No architectural certificate or proven fix follows; numeric zeros indicate an unestablished floor and delta.\"\n}",
+ "usage": {
+  "input_tokens": 761,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 642,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1403
+ },
+ "finish": "completed",
+ "seconds": 21.9
+}

@@ -1,0 +1,28 @@
+{
+ "gap": "B_cat",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No component is frozen, so no eligible chokepoint supports a positive architectural floor. The measured startup overhead is not unavoidable least work: dispatch, linking, dependencies, and build settings may all change. Conversely, no measured admissible modification demonstrates that the gap closes. The numeric floor and L_delta fields are placeholders because no certificate is available.\"}",
+ "usage": {
+  "input_tokens": 764,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 866,
+  "output_tokens_details": {
+   "reasoning_tokens": 767
+  },
+  "total_tokens": 1630
+ },
+ "finish": "completed",
+ "seconds": 23.6
+}

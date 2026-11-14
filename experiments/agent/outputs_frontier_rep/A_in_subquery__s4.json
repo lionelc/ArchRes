@@ -1,0 +1,28 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No certified floor; numeric fields are placeholders. The reported hotspots are mutable VDBE and statement code. Neither the frozen file format nor asynchronous I/O has quantified least-work costs covering all admissible caching, batching, and access strategies. Current page counts and instruction profiles cannot establish those costs. No specific setting or admissible change is demonstrated to close the gap.\"}",
+ "usage": {
+  "input_tokens": 1419,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1416
+  },
+  "output_tokens": 727,
+  "output_tokens_details": {
+   "reasoning_tokens": 624
+  },
+  "total_tokens": 2146
+ },
+ "finish": "completed",
+ "seconds": 19.7
+}

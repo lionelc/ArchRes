@@ -1,0 +1,28 @@
+{
+ "gap": "A_startup",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"SELECT 1 need not read database pages, so no positive frozen-I/O floor is established. Relocation and shell/build initialization are mutable; channel initialization is not shown unavoidable under every admissible calling context. Instruction counts establish neither least-work timings nor a change guaranteed to reach the approximately 4.14 ms target. No architectural certificate or demonstrated fix follows. Numeric zeros denote the absence of a certified floor and delta.\"}",
+ "usage": {
+  "input_tokens": 1293,
+  "input_tokens_details": {
+   "cache_write_tokens": 1290,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1290
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1148,
+  "output_tokens_details": {
+   "reasoning_tokens": 1034
+  },
+  "total_tokens": 2441
+ },
+ "finish": "completed",
+ "seconds": 35.2
+}

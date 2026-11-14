@@ -1,0 +1,35 @@
+{
+ "gap": "B_basename",
+ "seed": 3,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The contract freezes no component, so no certificate is possible. The gap is entirely start-up: `true` shows 2.1 ms for uutils against 0.9 ms for GNU, the same as basename. That points to dynamic loading and relocating the 19 MB multicall binary. A fully static, non-PIE build (crt-static, relocation-model=static, LTO, panic=abort, stripped) keeps it one pure-Rust binary. It should remove most loader and relocation cost and plausibly bring start-up within the band.\"}",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1123,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 561,
+  "output_tokens_details": {
+   "thinking_tokens": 349
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 6.6
+}

@@ -1,0 +1,35 @@
+{
+ "gap": "A_point_index",
+ "seed": 4,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\":\"candidate\",\"chokepoint\":[{\"operator\":\"page reads through the asynchronous I/O layer\",\"component\":\"asynchronous I/O layer\",\"frozen\":true,\"why_every_version_executes_it\":\"Every page Turso reads passes through the frozen async I/O layer. Each lookup must reach orders_cust B-tree pages, and the schema page must also be read.\",\"least_work\":{\"amount\":605,\"unit\":\"pages\",\"per_unit_cost_us\":1.0,\"total_ms\":0.6,\"calling_context\":\"warm OS cache; the mutable page cache keeps every page after first use, so each distinct index page is read once: at most about 600 leaves, a few interior pages and the schema page\"},\"max_cores\":1}],\"floor_ms\":0.6,\"L_delta\":-2.29,\"rationale\":\"Both engines use the same covering-index plan. The only frozen work is a few hundred cached page reads, about 0.6 ms, far below T_R_upper of 5.9 ms, so no certificate exists. The excess is in mutable code: about 4.4 ms of start-up/loading (build options), plus parser, malloc and memcpy overhead. No single named change is shown to reach 8.1 ms (within the band), so the case stays candidate rather than fixable.\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 2092,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1098,
+  "output_tokens_details": {
+   "thinking_tokens": 673
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 11.8
+}

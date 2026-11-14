@@ -1,0 +1,28 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No floor is certified; numeric zeros are placeholders. The profiles primarily identify mutable VDBE and record-access work, which cannot count toward an architectural floor. No minimum cost or unavoidable calling context is established for frozen asynchronous I/O. The file format alone supplies no timing lower bound. Nor is any specific admissible change demonstrated to close the gap.\"}",
+ "usage": {
+  "input_tokens": 1419,
+  "input_tokens_details": {
+   "cache_write_tokens": 1416,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1416
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 676,
+  "output_tokens_details": {
+   "reasoning_tokens": 576
+  },
+  "total_tokens": 2095
+ },
+ "finish": "completed",
+ "seconds": 18.9
+}

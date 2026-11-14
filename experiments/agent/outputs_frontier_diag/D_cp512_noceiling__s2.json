@@ -1,0 +1,28 @@
+{
+ "gap": "D_cp512_noceiling",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"The contract forces data through fd_read and fd_write, but measured 8 GB/s throughput is not an upper bound across all admissible calling contexts. The default 8 KiB syscall counts are also not mandatory. Therefore these measurements cannot certify minimum frozen-operator costs yielding a floor above 4.81 \u00d7 exp(0.236) \u2248 6.09 ms. No demonstrated admissible fix closes the gap. Zero floor fields denote no certified floor.\"\n}",
+ "usage": {
+  "input_tokens": 943,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 654,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1597
+ },
+ "finish": "completed",
+ "seconds": 17.9
+}

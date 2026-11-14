@@ -1,0 +1,14 @@
+{
+ "gap": "A_point_index",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"SEARCH orders USING COVERING INDEX orders_cust (cust=?)\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite file format and index semantics are frozen, so every version must use the same index for this query.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"query\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1.0,\n        \"calling_context\": \"fixed data and index\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"mi_heap_malloc_aligned_at\",\n      \"component\": \"asynchronous I/O layer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Memory allocation is part of the asynchronous I/O layer, which is frozen.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"call\",\n        \"per_unit_cost_us\": 500,\n        \"total_ms\": 0.5,\n        \"calling_context\": \"fixed memory allocation\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 1.5,\n  \"L_delta\": 1.0,\n  \"rationale\": \"The gap is architectural because the query execution and memory allocation are frozen, and their least work cannot be reduced. The floor is higher than the upper bound of R's time, making the gap irreducible.\"\n}",
+ "usage": {
+  "completion_tokens": 342,
+  "prompt_tokens": 1387,
+  "total_tokens": 1729,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 100.9
+}

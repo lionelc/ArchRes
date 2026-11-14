@@ -1,0 +1,28 @@
+{
+ "gap": "A_startup",
+ "seed": 6,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"fixable\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Add a lightweight shell path for constant SELECT statements, deferring engine loading, database opening, and asynchronous-I/O initialization until needed. SELECT 1 requires no database pages, so the frozen I/O layer need not execute. A minimal launcher can evaluate and print this result without the measured channel-construction and engine-relocation overhead, bringing startup within band. Shell, parser, evaluation code, and build changes are admissible.\"}",
+ "usage": {
+  "input_tokens": 1293,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1290
+  },
+  "output_tokens": 717,
+  "output_tokens_details": {
+   "reasoning_tokens": 601
+  },
+  "total_tokens": 2010
+ },
+ "finish": "completed",
+ "seconds": 20.8
+}

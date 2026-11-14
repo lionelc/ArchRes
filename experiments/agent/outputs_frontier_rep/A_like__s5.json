@@ -1,0 +1,28 @@
+{
+ "gap": "A_like",
+ "seed": 5,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The dominant LIKE and VDBE work is mutable. Mandatory scans do not establish a timing floor: no least asynchronous-I/O costs across admissible batching and caching contexts are supplied. Optimizing LIKE is admissible, but instruction profiles alone do not prove it would close the elapsed-time gap. No architectural certificate or demonstrated closing fix is available; numeric floor fields are unused placeholders.\"}",
+ "usage": {
+  "input_tokens": 1372,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1369
+  },
+  "output_tokens": 790,
+  "output_tokens_details": {
+   "reasoning_tokens": 684
+  },
+  "total_tokens": 2162
+ },
+ "finish": "completed",
+ "seconds": 21.2
+}

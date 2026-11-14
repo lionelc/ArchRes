@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -f "$1.out_w"
+exec /work/wasi/wasmtime-v50.0.1-x86_64-linux/wasmtime run --allow-precompiled --dir /mnt/xfs /work/wasi/coreutils.cwasm cp "$1" "$1.out_w"

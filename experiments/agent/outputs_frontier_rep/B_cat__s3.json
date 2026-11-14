@@ -1,0 +1,28 @@
+{
+ "gap": "B_cat",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No component is frozen, so startup, dynamic linking, dispatch, and copying cannot supply C1. The measured startup cost is not an unavoidable floor across admissible builds. Static linking and leaner initialization are admissible possibilities, but the supplied evidence does not establish that either would close the gap. No architectural certificate or demonstrated closing fix is available; numeric zeros denote unused floor/delta fields.\"}",
+ "usage": {
+  "input_tokens": 764,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 996,
+  "output_tokens_details": {
+   "reasoning_tokens": 887
+  },
+  "total_tokens": 1760
+ },
+ "finish": "completed",
+ "seconds": 29.5
+}

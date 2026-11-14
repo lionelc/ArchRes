@@ -1,0 +1,28 @@
+{
+ "gap": "D_cp512_ceiling",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"fd_write of destination file data\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Materializing the independent 512 MiB destination requires fd_write; the frozen interface provides no clone, splice or file-copy alternative.\",\n      \"least_work\": {\n        \"amount\": 536870912,\n        \"unit\": \"bytes\",\n        \"per_unit_cost_us\": 0.000125,\n        \"total_ms\": 67.108864,\n        \"calling_context\": \"Most favorable admissible buffering, caching, ordering and settings, at the stipulated ceiling of 8,000,000,000 bytes/s.\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 67.108864,\n  \"L_delta\": 2.635619,\n  \"rationale\": \"The write side alone certifies the gap. Single-threaded wasip1 limits this operator to one core, so the prescribed floor is max(67.108864/4, 67.108864) ms. Thus ln(L/4.81) = 2.635619 > 0.236. The envelope applies to every admissible calling context, not merely the observed 8 KiB calls. Mutable overhead and source-reading costs are excluded.\"\n}",
+ "usage": {
+  "input_tokens": 951,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1859,
+  "output_tokens_details": {
+   "reasoning_tokens": 1552
+  },
+  "total_tokens": 2810
+ },
+ "finish": "completed",
+ "seconds": 43.5
+}

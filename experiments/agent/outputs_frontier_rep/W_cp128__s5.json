@@ -1,0 +1,28 @@
+{
+ "gap": "W_cp128",
+ "seed": 5,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"The contract forces WASI-mediated copying, but the observed 8-KiB call count is mutable. Native throughput measured with 1-MiB buffers does not establish maximum throughput across all admissible fd_read/fd_write contexts. Thus C2 is unproven: no certified floor exceeds the approximately 6.34-ms threshold. No specific gap-closing change is demonstrated either. Zero numeric fields indicate that no floor or log delta is certified.\"\n}",
+ "usage": {
+  "input_tokens": 919,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1110,
+  "output_tokens_details": {
+   "reasoning_tokens": 974
+  },
+  "total_tokens": 2029
+ },
+ "finish": "completed",
+ "seconds": 28.0
+}

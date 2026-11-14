@@ -1,0 +1,14 @@
+{
+ "gap": "W_cp128",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"pread64\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 requires reading via fd_read, no file cloning or copying\",\n      \"least_work\": {\n        \"amount\": 16384,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 1638.4,\n        \"calling_context\": \"128 MiB file, 8 KiB reads\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"pwrite64\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 requires writing via fd_write, no file cloning or copying\",\n      \"least_work\": {\n        \"amount\": 16384,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 1638.4,\n        \"calling_context\": \"128 MiB file, 8 KiB writes\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 3276.8,\n  \"L_delta\": 3.19,\n  \"rationale\": \"The gap is architectural due to the fixed WASI interface requiring 16,384 reads and writes, with no optimization possible under the contract.\"\n}",
+ "usage": {
+  "completion_tokens": 351,
+  "prompt_tokens": 955,
+  "total_tokens": 1306,
+  "prompt_tokens_details": {
+   "cached_tokens": 954
+  }
+ },
+ "seconds": 78.4
+}

@@ -1,0 +1,14 @@
+{
+ "gap": "A_order_limit",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"USE SORTER FOR ORDER BY\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite's use of temp B-tree for order by is frozen by contract, and Turso must implement equivalent functionality\",\n      \"least_work\": {\n        \"amount\": 10,\n        \"unit\": \"rows\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 1000,\n        \"calling_context\": \"fixed query with 10 rows, 4394 pages in orders table\"\n      },\n      \"max_cores\": 4\n    }\n  ],\n  \"floor_ms\": 1000,\n  \"L_delta\": 1.71,\n  \"rationale\": \"Turso's use of a sorter for order by is a frozen component. The least work for sorting 10 rows is 1000ms, which exceeds SQLite's 309ms. The gap is architectural as no admissible change can reduce the cost of this frozen component.\"\n}",
+ "usage": {
+  "completion_tokens": 253,
+  "prompt_tokens": 1453,
+  "total_tokens": 1706,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 79.4
+}

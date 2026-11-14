@@ -1,0 +1,14 @@
+{
+ "gap": "B_cksum",
+ "seed": 1,
+ "text": "{\n  \"class\": \"fixable\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"The gap is fixable because uutils can be optimized by leveraging hardware instructions like AVX512 more effectively. Since the architecture contract allows changes to the code and build settings, performance can be improved.\"\n}",
+ "usage": {
+  "completion_tokens": 82,
+  "prompt_tokens": 812,
+  "total_tokens": 894,
+  "prompt_tokens_details": {
+   "cached_tokens": 634
+  }
+ },
+ "seconds": 23.2
+}

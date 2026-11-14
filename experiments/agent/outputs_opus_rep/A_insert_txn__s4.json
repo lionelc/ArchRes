@@ -1,0 +1,35 @@
+{
+ "gap": "A_insert_txn",
+ "seed": 4,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "{\"class\": \"candidate\", \"chokepoint\": [], \"floor_ms\": 0, \"L_delta\": 0, \"rationale\": \"Turso's profile is dominated by mutable code: Statement::_step, the VDBE ops (make_record, copy, insert, yield) and B-tree insert. None of these is frozen. The only frozen work is page I/O through the async layer plus the file format. For this write transaction that is a modest number of WAL page writes, and it does not show up in the profile. I cannot bound it near 22.4 ms, so no certificate is possible. I also know no single setting that would close the gap, so the answer is candidate rather than fixable.\"}",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 2072,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 405,
+  "output_tokens_details": {
+   "thinking_tokens": 192
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 8.8
+}

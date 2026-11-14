@@ -1,0 +1,28 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 6,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"The dominant profiled costs are in mutable VDBE and statement execution code. No minimum cost is supplied for frozen asynchronous I/O under optimal batching, caching, and ordering, so a frozen-operator floor cannot be certified. Planner or interpreter changes might close the gap, but no specific change has a demonstrated sufficient benefit across all six statements. Zero floor fields indicate no certificate.\"\n}",
+ "usage": {
+  "input_tokens": 1419,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1416
+  },
+  "output_tokens": 780,
+  "output_tokens_details": {
+   "reasoning_tokens": 660
+  },
+  "total_tokens": 2199
+ },
+ "finish": "completed",
+ "seconds": 22.6
+}

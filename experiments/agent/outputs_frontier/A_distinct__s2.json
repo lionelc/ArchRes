@@ -1,0 +1,28 @@
+{
+ "gap": "A_distinct",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Hash DISTINCT and startup are mutable and cannot support an architectural floor. Exploiting index order to skip duplicate customer keys is admissible, but no end-to-end timing establishes that it closes the gap. Measured Turso startup alone exceeds the approximately 5.38 ms target, though startup is also mutable. No minimum cost for unavoidable frozen asynchronous I/O is supplied, so neither an architectural certificate nor a gap-closing fix is established.\"}",
+ "usage": {
+  "input_tokens": 1382,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1379
+  },
+  "output_tokens": 806,
+  "output_tokens_details": {
+   "reasoning_tokens": 687
+  },
+  "total_tokens": 2188
+ },
+ "finish": "completed",
+ "seconds": 17.9
+}

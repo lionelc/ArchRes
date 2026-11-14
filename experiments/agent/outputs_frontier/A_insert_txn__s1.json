@@ -1,0 +1,28 @@
+{
+ "gap": "A_insert_txn",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The profiled hotspots are mutable statement, VDBE, and B-tree code. The full transaction and minimum asynchronous-I/O costs across admissible calling contexts are unspecified. Thus no unavoidable frozen-work floor above 22.4\u00b7exp(0.321), approximately 30.88 ms, is established. No specific change is demonstrated to close the gap either. Zero numeric fields indicate no certified floor or log bound.\"}",
+ "usage": {
+  "input_tokens": 1363,
+  "input_tokens_details": {
+   "cache_write_tokens": 1360,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1360
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 561,
+  "output_tokens_details": {
+   "reasoning_tokens": 446
+  },
+  "total_tokens": 1924
+ },
+ "finish": "completed",
+ "seconds": 14.4
+}

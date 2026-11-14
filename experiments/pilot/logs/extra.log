@@ -1,0 +1,19 @@
+2026-11-11T10:43:45Z EXTRA START
+R [('total', 12748), ('write', 11067), ('read', 1641), ('mmap', 8)] {'Maximum resident set size (kbytes)': '1720', 'Major (requiring I/O) page faults': '0', 'Minor (reclaiming a frame) page faults': '91', 'Voluntary context switches': '1', 'Involuntary context switches': '0', 'File system inputs': '0', 'File system outputs': '0'}
+Y1 [('total', 15108), ('write', 10924), ('read', 4104), ('mmap', 17)] {'Maximum resident set size (kbytes)': '8544', 'Major (requiring I/O) page faults': '0', 'Minor (reclaiming a frame) page faults': '522', 'Voluntary context switches': '1', 'Involuntary context switches': '0', 'File system inputs': '0', 'File system outputs': '0'}
+Y0 [('total', 2177), ('read', 1038), ('write', 1026), ('mmap', 31)] {'Maximum resident set size (kbytes)': '39824', 'Major (requiring I/O) page faults': '0', 'Minor (reclaiming a frame) page faults': '8534', 'Voluntary context switches': '1', 'Involuntary context switches': '0', 'File system inputs': '0', 'File system outputs': '0'}
+C Y1 3000 1172465780
+C R1 3000 969620036
+C R0 3000 962047376
+C P1400p 3000 1189019517
+C P1400 3000 1187610911
+C P1397p 3000 1189026478
+C P1397 3000 1189026087
+C Y1 6000 5000774373
+C R1 6000 4244536332
+C R0 6000 4200523733
+C P1400p 6000 5070449278
+C P1400 6000 5060705240
+C P1397p 6000 5070460022
+C P1397 6000 5070459565
+2026-11-11T10:47:29Z EXTRA END

@@ -1,0 +1,14 @@
+{
+ "gap": "A_order_limit",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"SCAN orders\",\n      \"component\": \"query planner/optimizer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite and Turso must scan the orders table for the query\",\n      \"least_work\": {\n        \"amount\": 4394,\n        \"unit\": \"pages\",\n        \"per_unit_cost_us\": 1.0,\n        \"total_ms\": 4.394,\n        \"calling_context\": \"fixed data, fixed batch size\"\n      },\n      \"max_cores\": 4\n    },\n    {\n      \"operator\": \"USE SORTER FOR ORDER BY\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Sorting is required for the ORDER BY clause\",\n      \"least_work\": {\n        \"amount\": 10,\n        \"unit\": \"rows\",\n        \"per_unit_cost_us\": 100.0,\n        \"total_ms\": 1000.0,\n        \"calling_context\": \"fixed data, fixed batch size\"\n      },\n      \"max_cores\": 4\n    }\n  ],\n  \"floor_ms\": 1004.394,\n  \"L_delta\": 1.70,\n  \"rationale\": \"The gap is architectural due to the fixed sorting implementation in Turso's VDBE. Both systems must scan the orders table, but Turso's sorting is significantly slower, and no admissible changes can improve this without altering the frozen components.\"\n}",
+ "usage": {
+  "completion_tokens": 350,
+  "prompt_tokens": 1453,
+  "total_tokens": 1803,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 106.8
+}

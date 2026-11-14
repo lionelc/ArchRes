@@ -1,0 +1,14 @@
+{
+ "gap": "A_startup",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"startup\",\n      \"component\": \"command-line shell\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The startup process is required to initialize the database connection and execute the query.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 7000,\n        \"total_ms\": 7.0,\n        \"calling_context\": \"Warm OS page cache, single query execution\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"asynchronous I/O\",\n      \"component\": \"asynchronous I/O layer\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"All I/O operations must pass through the frozen asynchronous I/O layer.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1.0,\n        \"calling_context\": \"Single I/O operation with fixed data\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 8.0,\n  \"L_delta\": 1.01,\n  \"rationale\": \"The startup and I/O operations are frozen, and their minimal costs cannot be reduced. The floor exceeds the reference time by more than the band, making the gap architectural.\"\n}",
+ "usage": {
+  "completion_tokens": 325,
+  "prompt_tokens": 1331,
+  "total_tokens": 1656,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 89.9
+}

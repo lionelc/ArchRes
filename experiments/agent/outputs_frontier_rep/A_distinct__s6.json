@@ -1,0 +1,28 @@
+{
+ "gap": "A_distinct",
+ "seed": 6,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"Hash DISTINCT and startup are mutable, so their measured costs cannot support an architectural floor. Ordered-index duplicate skipping is admissible, but no timing establishes that this change brings the complete four-statement cell within 5.38 ms. Mandatory frozen I/O has no context-minimized cost measurements. Neither an architectural certificate nor a gap-closing fix is established; zero floor fields indicate no certified bound.\"\n}",
+ "usage": {
+  "input_tokens": 1382,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1379
+  },
+  "output_tokens": 1130,
+  "output_tokens_details": {
+   "reasoning_tokens": 1006
+  },
+  "total_tokens": 2512
+ },
+ "finish": "completed",
+ "seconds": 27.5
+}

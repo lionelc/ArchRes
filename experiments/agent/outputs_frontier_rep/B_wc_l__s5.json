@@ -1,0 +1,28 @@
+{
+ "gap": "B_wc_l",
+ "seed": 5,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No component is frozen, so no operator supplies a contract-enforced floor. Pure Rust and multicall packaging do not require the observed startup premium or AVX2 implementation. AVX-512 newline counting and startup/build optimizations are admissible, but these measurements do not establish that a specific change closes the band. Zero numeric fields denote no certified floor.\"}",
+ "usage": {
+  "input_tokens": 787,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 992,
+  "output_tokens_details": {
+   "reasoning_tokens": 890
+  },
+  "total_tokens": 1779
+ },
+ "finish": "completed",
+ "seconds": 25.5
+}

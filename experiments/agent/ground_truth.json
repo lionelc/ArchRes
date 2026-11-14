@@ -1,0 +1,716 @@
+{
+ "A_point_rowid": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 1622,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 1622,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   0.8492,
+   0.8741
+  ],
+  "T_R_s": [
+   0.0141,
+   0.0155
+  ],
+  "T_Y_s": [
+   0.0353,
+   0.0356
+  ]
+ },
+ "A_point_index": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 5,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 5,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   0.9001,
+   1.0019
+  ],
+  "T_R_s": [
+   0.0054,
+   0.0051
+  ],
+  "T_Y_s": [
+   0.0135,
+   0.0141
+  ]
+ },
+ "A_scan_agg": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 4394,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 4394,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   0.2302,
+   0.2576
+  ],
+  "T_R_s": [
+   0.1114,
+   0.1091
+  ],
+  "T_Y_s": [
+   0.1403,
+   0.1404
+  ]
+ },
+ "A_join3_star": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 4541,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 4541,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   0.7409,
+   0.603
+  ],
+  "T_R_s": [
+   0.0701,
+   0.0762
+  ],
+  "T_Y_s": [
+   0.1559,
+   0.1401
+  ]
+ },
+ "A_order_limit": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 4394,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 4394,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   1.7016,
+   1.7063
+  ],
+  "T_R_s": [
+   0.3091,
+   0.3104
+  ],
+  "T_Y_s": [
+   1.6926,
+   1.6964
+  ]
+ },
+ "A_like": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 4394,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 4394,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   0.5428,
+   0.5432
+  ],
+  "T_R_s": [
+   0.215,
+   0.2235
+  ],
+  "T_Y_s": [
+   0.3759,
+   0.3789
+  ]
+ },
+ "A_in_subquery": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 4399,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 4399,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   0.4444,
+   0.37
+  ],
+  "T_R_s": [
+   0.093,
+   0.0933
+  ],
+  "T_Y_s": [
+   0.1376,
+   0.1381
+  ]
+ },
+ "A_distinct": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 44,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 44,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   3.5957,
+   3.6228
+  ],
+  "T_R_s": [
+   0.0035,
+   0.003
+  ],
+  "T_Y_s": [
+   0.1118,
+   0.1102
+  ]
+ },
+ "A_insert_txn": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 587,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 587,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   1.1607,
+   1.1117
+  ],
+  "T_R_s": [
+   0.0203,
+   0.0204
+  ],
+  "T_Y_s": [
+   0.0681,
+   0.0674
+  ]
+ },
+ "A_startup": {
+  "pair": "A",
+  "contract": "main",
+  "frozen": [
+   "file format",
+   "asynchronous I/O layer"
+  ],
+  "forced": {
+   "asynchronous I/O layer": {
+    "unit": "pages",
+    "amount_upper": 0,
+    "per_unit_upper_us": 8.86
+   },
+   "file format": {
+    "unit": "pages",
+    "amount_upper": 0,
+    "per_unit_upper_us": 8.86
+   }
+  },
+  "avoidable": [
+   "fsync",
+   "ftruncate",
+   "checkpoint",
+   "\\bsync\\b"
+  ],
+  "cores": {
+   "asynchronous I/O layer": 4,
+   "file format": 4
+  },
+  "klass": "candidate",
+  "g": [
+   1.013,
+   1.0015
+  ],
+  "T_R_s": [
+   0.0027,
+   0.0025
+  ],
+  "T_Y_s": [
+   0.0071,
+   0.0069
+  ]
+ },
+ "B_true": {
+  "pair": "B",
+  "contract": "native",
+  "frozen": [],
+  "forced": {},
+  "avoidable": [],
+  "cores": {},
+  "klass": "candidate",
+  "g": [
+   0.9103,
+   0.854
+  ],
+  "T_R_s": [
+   0.0009,
+   0.0009
+  ],
+  "T_Y_s": [
+   0.0021,
+   0.0021
+  ]
+ },
+ "B_basename": {
+  "pair": "B",
+  "contract": "native",
+  "frozen": [],
+  "forced": {},
+  "avoidable": [],
+  "cores": {},
+  "klass": "candidate",
+  "g": [
+   0.8652,
+   0.7937
+  ],
+  "T_R_s": [
+   0.0009,
+   0.001
+  ],
+  "T_Y_s": [
+   0.0021,
+   0.0023
+  ]
+ },
+ "B_cat": {
+  "pair": "B",
+  "contract": "native",
+  "frozen": [],
+  "forced": {},
+  "avoidable": [],
+  "cores": {},
+  "klass": "candidate",
+  "g": [
+   0.7739,
+   0.6359
+  ],
+  "T_R_s": [
+   0.0012,
+   0.0012
+  ],
+  "T_Y_s": [
+   0.0025,
+   0.0023
+  ]
+ },
+ "B_wc_l": {
+  "pair": "B",
+  "contract": "native",
+  "frozen": [],
+  "forced": {},
+  "avoidable": [],
+  "cores": {},
+  "klass": "candidate",
+  "g": [
+   0.3342,
+   0.295
+  ],
+  "T_R_s": [
+   0.0034,
+   0.0032
+  ],
+  "T_Y_s": [
+   0.0047,
+   0.0043
+  ]
+ },
+ "B_cksum": {
+  "pair": "B",
+  "contract": "native",
+  "frozen": [],
+  "forced": {},
+  "avoidable": [],
+  "cores": {},
+  "klass": "candidate",
+  "g": [
+   0.3552,
+   0.3819
+  ],
+  "T_R_s": [
+   0.0042,
+   0.0043
+  ],
+  "T_Y_s": [
+   0.0061,
+   0.0062
+  ]
+ },
+ "B_wc_m": {
+  "pair": "B",
+  "contract": "native",
+  "frozen": [],
+  "forced": {},
+  "avoidable": [],
+  "cores": {},
+  "klass": "candidate",
+  "g": [
+   1.3394,
+   1.4801
+  ],
+  "T_R_s": [
+   0.0011,
+   0.0012
+  ],
+  "T_Y_s": [
+   0.0042,
+   0.0058
+  ]
+ },
+ "W_cp512": {
+  "pair": "B",
+  "contract": "wasi",
+  "frozen": [
+   "WASI fd_read",
+   "WASI fd_write",
+   "WebAssembly runtime (wasmtime)"
+  ],
+  "forced": {
+   "WASI fd_read": {
+    "unit": "bytes",
+    "amount_upper": 536870912,
+    "per_unit_upper_us": 0.0006175607442855835
+   },
+   "WASI fd_write": {
+    "unit": "bytes",
+    "amount_upper": 536870912,
+    "per_unit_upper_us": 0.0006175607442855835
+   }
+  },
+  "avoidable": [
+   "compil",
+   "JIT",
+   "cranelift"
+  ],
+  "cores": {
+   "WASI fd_read": 1,
+   "WASI fd_write": 1,
+   "WebAssembly runtime (wasmtime)": 1
+  },
+  "klass": "architectural",
+  "g": [
+   4.4731
+  ],
+  "T_R_s": [
+   0.0036787
+  ],
+  "T_R_upper_s": 0.004808099999999999,
+  "T_Y_s": [
+   0.3315504
+  ],
+  "envelope_ms": {
+   "read": 66.68599999999999,
+   "write": 63.885999999999996
+  }
+ },
+ "W_cp128": {
+  "pair": "B",
+  "contract": "wasi",
+  "frozen": [
+   "WASI fd_read",
+   "WASI fd_write",
+   "WebAssembly runtime (wasmtime)"
+  ],
+  "forced": {
+   "WASI fd_read": {
+    "unit": "bytes",
+    "amount_upper": 134217728,
+    "per_unit_upper_us": 0.0006527639925479889
+   },
+   "WASI fd_write": {
+    "unit": "bytes",
+    "amount_upper": 134217728,
+    "per_unit_upper_us": 0.0006527639925479889
+   }
+  },
+  "avoidable": [
+   "compil",
+   "JIT",
+   "cranelift"
+  ],
+  "cores": {
+   "WASI fd_read": 1,
+   "WASI fd_write": 1,
+   "WebAssembly runtime (wasmtime)": 1
+  },
+  "klass": "architectural",
+  "g": [
+   3.1941
+  ],
+  "T_R_s": [
+   0.003673
+  ],
+  "T_R_upper_s": 0.0050127,
+  "T_Y_s": [
+   0.0876125
+  ],
+  "envelope_ms": {
+   "read": 18.916,
+   "write": 15.834000000000001
+  }
+ },
+ "W_cksum32": {
+  "pair": "B",
+  "contract": "wasi",
+  "frozen": [
+   "WASI fd_read",
+   "WASI fd_write",
+   "WebAssembly runtime (wasmtime)"
+  ],
+  "forced": {
+   "WASI fd_read": {
+    "unit": "bytes",
+    "amount_upper": 33554432,
+    "per_unit_upper_us": 0.0009983330965042114
+   }
+  },
+  "avoidable": [
+   "compil",
+   "JIT",
+   "cranelift"
+  ],
+  "cores": {
+   "WASI fd_read": 1,
+   "WASI fd_write": 1,
+   "WebAssembly runtime (wasmtime)": 1
+  },
+  "klass": "candidate",
+  "g": [
+   1.3703
+  ],
+  "T_R_s": [
+   0.008423700000000001
+  ],
+  "T_R_upper_s": 0.0095858,
+  "T_Y_s": [
+   0.0334985
+  ],
+  "envelope_ms": {
+   "read": 4.66,
+   "write": 3.9160000000000004
+  }
+ },
+ "P_sort_frozen_plant": {
+  "pair": "B",
+  "contract": "planted",
+  "frozen": [
+   "preloaded constructor F"
+  ],
+  "forced": {
+   "preloaded constructor F": {
+    "unit": "runs",
+    "amount_upper": 1,
+    "per_unit_upper_us": 0.0
+   }
+  },
+  "avoidable": [],
+  "cores": {
+   "preloaded constructor F": 1
+  },
+  "klass": "fixable",
+  "g": [
+   0.9497
+  ],
+  "T_R_upper_s": 0.049549300000000004,
+  "w_ms": 84.284,
+  "note": "DEVIATIONS #12b: the contract froze F but not its duration (GAPCR_PLANT_US), a setting; F least work is 0 in the admissible context GAPCR_PLANT_US=0"
+ }
+}

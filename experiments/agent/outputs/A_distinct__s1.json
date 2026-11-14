@@ -1,0 +1,14 @@
+{
+ "gap": "A_distinct",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"op_hash_distinct\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The query plan requires a hash table for count(DISTINCT) and this is a frozen operator\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1000,\n        \"calling_context\": \"fixed data and command\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 1000,\n  \"L_delta\": 3.62,\n  \"rationale\": \"The hash distinct operation is a frozen VDBE operator, and its cost is fixed. The gap exceeds the band, indicating an architectural limitation.\"\n}",
+ "usage": {
+  "completion_tokens": 207,
+  "prompt_tokens": 1431,
+  "total_tokens": 1638,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  }
+ },
+ "seconds": 84.5
+}

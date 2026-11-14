@@ -1,0 +1,35 @@
+{
+ "gap": "A_point_index",
+ "seed": 2,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\": \"candidate\", \"chokepoint\": [], \"floor_ms\": 0, \"L_delta\": 0, \"rationale\": \"Turso's start-up costs about 4.4 ms more than SQLite's. Its profile is dominated by memcpy, mimalloc and the parser. Start-up, allocator, parser and VDBE are all mutable. The only frozen work is page reads through the async I/O layer: at most about 1,000 distinct pages, a few ms on one core, so log(L) - log(5.9) stays at or below about 0. No valid certificate exists. Closing to within 8.1 ms needs start-up and per-statement reductions together, and I cannot name one change that surely does this.\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 2092,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 886,
+  "output_tokens_details": {
+   "thinking_tokens": 652
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 10.3
+}

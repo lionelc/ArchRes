@@ -1,0 +1,14 @@
+{
+ "gap": "A_startup",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"startup\",\n      \"component\": \"process start-up and dynamic loading\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Startup is required for any command-line shell execution\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 7.1,\n        \"calling_context\": \"Warm OS page cache, no output\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 7.1,\n  \"L_delta\": 1.01,\n  \"rationale\": \"The startup time is fixed by the architecture contract, and no admissible changes can reduce it. The gap is architectural as it exceeds the band.\"\n}",
+ "usage": {
+  "completion_tokens": 194,
+  "prompt_tokens": 1331,
+  "total_tokens": 1525,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 61.5
+}

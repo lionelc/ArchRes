@@ -1,0 +1,28 @@
+{
+ "gap": "W_cksum32",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"Checksum computation is mutable. Reading the file through fd_read is unavoidable, but native read throughput does not establish its minimum cost across admissible calling contexts. No frozen-work floor exceeding 9.59 \u00d7 exp(0.236) \u2248 12.14 ms is established. Nor do the measurements demonstrate an admissible optimization that closes the gap. Zero fields denote no certified floor; L_delta is a placeholder, not a computed logarithmic difference.\"\n}",
+ "usage": {
+  "input_tokens": 877,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 792,
+  "output_tokens_details": {
+   "reasoning_tokens": 657
+  },
+  "total_tokens": 1669
+ },
+ "finish": "completed",
+ "seconds": 19.1
+}

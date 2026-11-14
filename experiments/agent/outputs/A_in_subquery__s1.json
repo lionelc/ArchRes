@@ -1,0 +1,14 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"SCAN orders\",\n      \"component\": \"B-tree code\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite file format and B-tree code are frozen by the contract\",\n      \"least_work\": {\n        \"amount\": 4394,\n        \"unit\": \"pages\",\n        \"per_unit_cost_us\": 1.0,\n        \"total_ms\": 4.394,\n        \"calling_context\": \"WAL mode, page size 4096\"\n      },\n      \"max_cores\": 4\n    },\n    {\n      \"operator\": \"SEARCH customers USING INTEGER PRIMARY KEY (rowid=?)\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite file format and VDBE are frozen by the contract\",\n      \"least_work\": {\n        \"amount\": 125,\n        \"unit\": \"pages\",\n        \"per_unit_cost_us\": 1.0,\n        \"total_ms\": 0.125,\n        \"calling_context\": \"WAL mode, page size 4096\"\n      },\n      \"max_cores\": 4\n    }\n  ],\n  \"floor_ms\": 4.519,\n  \"L_delta\": 0.44,\n  \"rationale\": \"The gap is architectural as the least work for the frozen operators (SCAN orders and SEARCH customers) cannot be reduced under the contract. The floor exceeds the upper bound of R's time by more than the band.\"\n}",
+ "usage": {
+  "completion_tokens": 356,
+  "prompt_tokens": 1477,
+  "total_tokens": 1833,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 106.1
+}

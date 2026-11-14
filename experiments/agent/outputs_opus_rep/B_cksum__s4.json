@@ -1,0 +1,35 @@
+{
+ "gap": "B_cksum",
+ "seed": 4,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\": \"fixable\",\n \"chokepoint\": [],\n \"floor_ms\": 0,\n \"L_delta\": 0,\n \"rationale\": \"No component is frozen, so no chokepoint certificate exists. Start-up alone is about 1.2 ms of the roughly 1.9 ms gap (true: 2.1 ms vs 0.9 ms). That cost likely comes from dynamic loading and relocations of the 19 MB multicall binary. Static linking (crt-static, non-PIE) with fewer relocations keeps it pure Rust and multicall. That should leave T_Y near 4.9 ms, about 0.15 log units over 4.2 ms, inside the 0.236 band. Using the AVX-512 CRC kernel would close the gap further.\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 1188,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 684,
+  "output_tokens_details": {
+   "thinking_tokens": 422
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 7.4
+}

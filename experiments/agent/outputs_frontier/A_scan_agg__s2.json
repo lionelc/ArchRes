@@ -1,0 +1,28 @@
+{
+ "gap": "A_scan_agg",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The dominant profiled costs are in mutable statement execution, VDBE operations, and aggregation. No context-independent least cost is supplied for the frozen asynchronous I/O layer; admissible caching and batching also prevent equating observed page accesses with mandatory I/O calls. Consequently, no architectural floor is certified, and no specific optimization is established to close the gap. Zero floor and delta indicate no certified bound.\"}",
+ "usage": {
+  "input_tokens": 1359,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1356
+  },
+  "output_tokens": 552,
+  "output_tokens_details": {
+   "reasoning_tokens": 441
+  },
+  "total_tokens": 1911
+ },
+ "finish": "completed",
+ "seconds": 13.9
+}

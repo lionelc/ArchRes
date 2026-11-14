@@ -1,0 +1,428 @@
+{
+ "C1": {
+  "g_Y0_R0": [
+   0.0628,
+   0.0887
+  ],
+  "band": [
+   0.162,
+   0.1515
+  ],
+  "verdict": "not robust"
+ },
+ "C7": {
+  "est_Y1_vs_Y0": [
+   0.0507,
+   -0.0212
+  ],
+  "g_Y1_R0": [
+   0.1113,
+   0.1044
+  ],
+  "verdict": "null-consistent"
+ },
+ "C5": {
+  "e": [
+   -0.0134,
+   -0.0161
+  ],
+  "instr": -0.0,
+  "verdict_timing": "null-consistent",
+  "verdict_deterministic": "confirmed"
+ },
+ "C6": {
+  "e": [
+   0.0271,
+   -0.0094
+  ],
+  "instr": 0.0015,
+  "verdict_timing": "null-consistent",
+  "verdict_deterministic": "refuted (more instructions)"
+ },
+ "C8": {
+  "g_none_minus_g_default": [
+   0.4372,
+   0.3042
+  ],
+  "band": [
+   0.162,
+   0.1515
+  ],
+  "verdict": "confirmed"
+ },
+ "C2": {
+  "rust_share_instr": 0.4402,
+  "verdict": "confirmed"
+ },
+ "C3": {
+  "max_single_share": 0.3101,
+  "top": [
+   [
+    "__memset_avx2_unaligned_erms",
+    6497112,
+    0.3101
+   ],
+   [
+    "cdef_brow",
+    3892933,
+    0.1858
+   ],
+   [
+    "decode_b",
+    3231777,
+    0.1542
+   ],
+   [
+    "__memcpy_avx_unaligned_erms",
+    2709767,
+    0.1293
+   ],
+   [
+    "refmvs_find",
+    1107460,
+    0.0529
+   ]
+  ],
+  "verdict": "refuted"
+ },
+ "C4": {
+  "verdict": "untestable without repair (needs a modified rustc)"
+ },
+ "B1": {
+  "g_Y0_R": 0.3182,
+  "ratio": 1.3747,
+  "band": 0.2362,
+  "verdict": "robust slower, ratio below 4"
+ },
+ "B3": {
+  "g_Y0_R": 2.7755,
+  "ratio": 16.0466,
+  "band": 0.2362,
+  "verdict": "confirmed",
+  "g_Y1_R": 0.2641,
+  "Y1_fixed": false
+ },
+ "B2": {
+  "g_Y1_R": -0.7177,
+  "band": 0.2362,
+  "verdict": "confirmed"
+ },
+ "B4": {
+  "cksum": {
+   "g_Y0_R": 2.7922,
+   "g_Y0_Rk": 1.3846,
+   "e_KO_on_R": 1.4244,
+   "verdict": "confirmed"
+  },
+  "base64": {
+   "e_KO_on_R": -0.0346,
+   "g_Y0_R": 0.2932,
+   "verdict": "refuted (GNU base64 has no hardware path; the gap is not a SIMD gap)"
+  }
+ },
+ "A1": {
+  "share_of_slower_gap_mass_in_plan_identical_cells": 0.9031,
+  "cells": [
+   {
+    "cell": "A_distinct",
+    "g_mean": 3.6092,
+    "same_plan": true
+   },
+   {
+    "cell": "A_in_subquery",
+    "g_mean": 0.4072,
+    "same_plan": false
+   },
+   {
+    "cell": "A_insert_txn",
+    "g_mean": 1.1362,
+    "same_plan": true
+   },
+   {
+    "cell": "A_join3_star",
+    "g_mean": 0.672,
+    "same_plan": false
+   },
+   {
+    "cell": "A_like",
+    "g_mean": 0.543,
+    "same_plan": true
+   },
+   {
+    "cell": "A_order_limit",
+    "g_mean": 1.7039,
+    "same_plan": true
+   },
+   {
+    "cell": "A_point_index",
+    "g_mean": 0.951,
+    "same_plan": true
+   },
+   {
+    "cell": "A_point_rowid",
+    "g_mean": 0.8617,
+    "same_plan": true
+   },
+   {
+    "cell": "A_scan_agg",
+    "g_mean": 0.2439,
+    "same_plan": true
+   },
+   {
+    "cell": "A_startup",
+    "g_mean": 1.0072,
+    "same_plan": true
+   }
+  ],
+  "verdict": "refuted"
+ },
+ "A2": {
+  "cells": {
+   "A_scan_agg": {
+    "g": [
+     0.2302,
+     0.2576
+    ],
+    "threshold": 0.6931,
+    "meets": false
+   },
+   "A_point_rowid": {
+    "g": [
+     0.8492,
+     0.8741
+    ],
+    "threshold": 0.2624,
+    "meets": true
+   },
+   "A_join2": {
+    "g": [
+     0.2061,
+     0.139
+    ],
+    "threshold": 0.2624,
+    "meets": false
+   }
+  },
+  "verdict": "partly or not confirmed"
+ },
+ "A3": {
+  "robust_Y0_gap_cells": 14,
+  "shrunk_beyond_null": 11,
+  "verdict": "confirmed"
+ },
+ "B5": {
+  "gnu": {
+   "cells_with_feature_in_use": [
+    "B_cksum",
+    "B_wc_l"
+   ],
+   "KO_switches_all": true
+  },
+  "uu12": {
+   "cells_with_feature_in_use": [
+    "B_cksum"
+   ],
+   "KO_switches_all": true
+  },
+  "verdict": "confirmed"
+ }
+}
+{
+ "C-cg1": {
+  "cg_claim": "shared asm carries no excess (anchors equal), so the asm configuration does not move the gap",
+  "cg_predicted_change": 0.0,
+  "measured_change_g_none_minus_g_default": [
+   0.4372,
+   0.3042
+  ],
+  "abs_error": [
+   0.4372,
+   0.3042
+  ]
+ },
+ "C-cg2": {
+  "cg_profile": {
+   "excess_instr": 1526704,
+   "share_of_excess": 0.0769,
+   "predicted_log_gain": -0.0091
+  },
+  "measured_instr_change": 0.0015,
+  "measured_time_effect": [
+   0.0271,
+   -0.0094
+  ]
+ },
+ "C-cg3": {
+  "cg_profile": {
+   "excess_instr": 3306785,
+   "share_of_excess": 0.1664,
+   "predicted_log_gain": -0.0198
+  },
+  "measured_instr_change": -0.0,
+  "measured_time_effect": [
+   -0.0134,
+   -0.0161
+  ]
+ },
+ "B-cg1-Y1": {
+  "cg_signature_contrast": 0.4178,
+  "measured_knockout_effect_on_gap_mean": 1.3252,
+  "per_cell": [
+   [
+    "B_cksum",
+    1,
+    1.4821
+   ],
+   [
+    "B_cksum",
+    2,
+    1.4105
+   ],
+   [
+    "B_wc_l",
+    1,
+    1.1821
+   ],
+   [
+    "B_wc_l",
+    2,
+    1.226
+   ]
+  ]
+ },
+ "B-cg1-Y0": {
+  "cg_signature_contrast": 1.4248,
+  "measured_knockout_effect_on_gap_mean": 1.3354,
+  "per_cell": [
+   [
+    "B_cksum",
+    1,
+    1.4542
+   ],
+   [
+    "B_cksum",
+    2,
+    1.4076
+   ],
+   [
+    "B_wc_l",
+    1,
+    1.2037
+   ],
+   [
+    "B_wc_l",
+    2,
+    1.2761
+   ]
+  ]
+ },
+ "B-cg2": {
+  "cg_claim": "the Y0 base64 and cksum gaps were caused by missing SIMD (they were fixed by SIMD crates)",
+  "base64_knockout_on_R": [
+   0.0095,
+   -0.0346
+  ],
+  "base64_g_Y0_R": [
+   0.3911,
+   0.2932
+  ],
+  "cksum_g_Y0_R": [
+   2.8029,
+   2.7922
+  ],
+  "cksum_g_Y0_Rk": [
+   1.3487,
+   1.3846
+  ]
+ },
+ "A-cg1": {
+  "cg_signature_contrast_plan_diff_minus_same": -0.3856,
+  "mean_gap_plan_identical": 0.8029,
+  "mean_gap_plan_different": 0.4172,
+  "measured_decompositions": [
+   {
+    "cell": "in_subquery (Y1; SQLite without Bloom runs Turso's plan)",
+    "seed": 1,
+    "gap": 0.4258,
+    "plan_part": -0.0322,
+    "execution_part": 0.4581
+   },
+   {
+    "cell": "join3_star (Y0 = Turso 0.5.0; SQLite without Bloom runs its plan)",
+    "seed": 1,
+    "gap": 1.9396,
+    "plan_part": 0.7973,
+    "execution_part": 1.1423
+   },
+   {
+    "cell": "join2 S1 (crossed statistics states)",
+    "seed": 1,
+    "gap": 0.1778,
+    "plan_part": 0.088,
+    "execution_part": 0.0899,
+    "plan_part_if_common_plan_is_Turso_s": -0.0688,
+    "plan_part_if_common_plan_is_SQLite_s": 0.2447,
+    "note": "interaction: the execution gap is +0.25 under one plan and -0.05 under the other; plan_part is the Shapley average of the two switching orders"
+   },
+   {
+    "cell": "in_subquery (Y1; SQLite without Bloom runs Turso's plan)",
+    "seed": 2,
+    "gap": 0.4493,
+    "plan_part": 0.0767,
+    "execution_part": 0.3726
+   },
+   {
+    "cell": "join3_star (Y0 = Turso 0.5.0; SQLite without Bloom runs its plan)",
+    "seed": 2,
+    "gap": 1.9083,
+    "plan_part": 0.7673,
+    "execution_part": 1.141
+   },
+   {
+    "cell": "join2 S1 (crossed statistics states)",
+    "seed": 2,
+    "gap": 0.1274,
+    "plan_part": 0.0226,
+    "execution_part": 0.1049,
+    "plan_part_if_common_plan_is_Turso_s": -0.1261,
+    "plan_part_if_common_plan_is_SQLite_s": 0.1712,
+    "note": "interaction: the execution gap is +0.25 under one plan and -0.05 under the other; plan_part is the Shapley average of the two switching orders"
+   },
+   {
+    "cell": "distinct (Y1; SQLite without DistinctOpt runs Turso's operator; exploratory, DEVIATIONS #7)",
+    "seed": 1,
+    "gap": 3.4389,
+    "plan_part": 2.6229,
+    "execution_part": 0.816,
+    "Y_aa": 0.1102
+   },
+   {
+    "cell": "distinct (Y1; SQLite without DistinctOpt runs Turso's operator; exploratory, DEVIATIONS #7)",
+    "seed": 2,
+    "gap": 3.5724,
+    "plan_part": 2.5409,
+    "execution_part": 1.0316,
+    "Y_aa": -0.0518
+   }
+  ]
+ },
+ "A-cg2": {
+  "join2_per_state": [
+   [
+    1,
+    0.1778,
+    0.0045,
+    0.2466,
+    -0.0669
+   ],
+   [
+    2,
+    0.1274,
+    0.0672,
+    0.2535,
+    -0.0438
+   ]
+  ],
+  "columns": "seed, gap S1, gap S0, execution gap with customers-first plan (Y in S1 vs R in S0), with orders-first plan (Y in S0 vs R in S1)"
+ }
+}

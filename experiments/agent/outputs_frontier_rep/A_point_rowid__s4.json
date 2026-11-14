@@ -1,0 +1,28 @@
+{
+ "gap": "A_point_rowid",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"No frozen-cost certificate is available. Parser, allocation, copying, startup, and B-tree execution costs are mutable. An admissible page cache can avoid repeated asynchronous reads, and no minimum mandatory I/O cost across admissible contexts is supplied. Matching query plans do not establish such a bound. No specific change is demonstrated to close the gap. Zero floor and delta fields denote that no floor was certified.\"\n}",
+ "usage": {
+  "input_tokens": 1328,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1325
+  },
+  "output_tokens": 520,
+  "output_tokens_details": {
+   "reasoning_tokens": 395
+  },
+  "total_tokens": 1848
+ },
+ "finish": "completed",
+ "seconds": 14.3
+}

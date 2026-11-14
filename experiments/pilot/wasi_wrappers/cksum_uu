@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /work/pilot/bin/uu-0.12.0/coreutils cksum "$1"

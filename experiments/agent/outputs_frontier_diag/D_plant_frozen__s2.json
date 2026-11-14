@@ -1,0 +1,28 @@
+{
+ "gap": "D_plant_frozen",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"architectural\",\"chokepoint\":[{\"operator\":\"gapcr_plant mandatory busy-wait\",\"component\":\"preloaded constructor F\",\"frozen\":true,\"why_every_version_executes_it\":\"The contract requires F to run once per invocation with GAPCR_PLANT_US fixed at 84284.\",\"least_work\":{\"amount\":1,\"unit\":\"calls\",\"per_unit_cost_us\":84284,\"total_ms\":84.284,\"calling_context\":\"Any admissible invocation: the frozen positive duration requires at least 84284 microseconds of monotonic elapsed time, regardless of caching, batching, or utility implementation.\"},\"max_cores\":1}],\"floor_ms\":84.284,\"L_delta\":0.53222,\"rationale\":\"Assigning zero cost to all mutable code, F alone imposes a serial elapsed-time floor. L = max(84.284/4, 84.284/1) = 84.284 ms. Thus ln(L/49.5) = 0.53222 > b = 0.236. Even eliminating all sorting and other mutable overhead cannot bring Y within the band.\"}",
+ "usage": {
+  "input_tokens": 1012,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 974,
+  "output_tokens_details": {
+   "reasoning_tokens": 736
+  },
+  "total_tokens": 1986
+ },
+ "finish": "completed",
+ "seconds": 22.9
+}

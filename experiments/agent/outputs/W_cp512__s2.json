@@ -1,0 +1,14 @@
+{
+ "gap": "W_cp512",
+ "seed": 2,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"pread64\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 requires reading via fd_read, no direct file copy.\",\n      \"least_work\": {\n        \"amount\": 65536,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 6553.6,\n        \"calling_context\": \"Single-threaded, 8 KiB per call\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"pwrite64\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI preview1 requires writing via fd_write, no direct file copy.\",\n      \"least_work\": {\n        \"amount\": 65536,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 6553.6,\n        \"calling_context\": \"Single-threaded, 8 KiB per call\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 13107.2,\n  \"L_delta\": 4.47,\n  \"rationale\": \"The gap is architectural because the WASI preview1 interface forces Y to use 65536 pread64 and pwrite64 calls, which are unavoidable. The floor is the sum of their least work, and the gap exceeds the band.\"\n}",
+ "usage": {
+  "completion_tokens": 368,
+  "prompt_tokens": 956,
+  "total_tokens": 1324,
+  "prompt_tokens_details": {
+   "cached_tokens": 743
+  }
+ },
+ "seconds": 92.9
+}

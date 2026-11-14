@@ -1,0 +1,14 @@
+{
+ "gap": "A_like",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"exec_like\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite's LIKE operator is frozen by the contract, so all versions of Turso must implement it.\",\n      \"least_work\": {\n        \"amount\": 3800000000,\n        \"unit\": \"instructions\",\n        \"per_unit_cost_us\": 0.1,\n        \"total_ms\": 380,\n        \"calling_context\": \"LIKE query on 300,000 rows with full scan\"\n      },\n      \"max_cores\": 4\n    }\n  ],\n  \"floor_ms\": 380,\n  \"L_delta\": 0.54,\n  \"rationale\": \"The LIKE operation is frozen and executed by Turso's VDBE interpreter. The least work for this operator is fixed, and no admissible change can reduce its cost. The gap remains architectural.\"\n}",
+ "usage": {
+  "completion_tokens": 233,
+  "prompt_tokens": 1432,
+  "total_tokens": 1665,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 70.8
+}

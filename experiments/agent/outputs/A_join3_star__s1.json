@@ -1,0 +1,14 @@
+{
+ "gap": "A_join3_star",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"HASH JOIN orders AS o\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite's JOIN semantics are frozen, so Turso must implement JOINs via hash joins.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"join\",\n        \"per_unit_cost_us\": 1000,\n        \"total_ms\": 1000,\n        \"calling_context\": \"fixed data and query\"\n      },\n      \"max_cores\": 4\n    },\n    {\n      \"operator\": \"USE SORTER FOR GROUP BY\",\n      \"component\": \"VDBE (bytecode interpreter)\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"SQLite's GROUP BY semantics are frozen, so Turso must use a sorter for grouping.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"group by\",\n        \"per_unit_cost_us\": 1500,\n        \"total_ms\": 1500,\n        \"calling_context\": \"fixed data and query\"\n      },\n      \"max_cores\": 4\n    }\n  ],\n  \"floor_ms\": 1500,\n  \"L_delta\": 0.74,\n  \"rationale\": \"Turso must execute hash joins and sorters due to frozen SQLite semantics. The least work for these operators is fixed, and no admissible change can reduce their cost. The gap exceeds the band.\"\n}",
+ "usage": {
+  "completion_tokens": 347,
+  "prompt_tokens": 1564,
+  "total_tokens": 1911,
+  "prompt_tokens_details": {
+   "cached_tokens": 903
+  }
+ },
+ "seconds": 106.4
+}

@@ -1,0 +1,28 @@
+{
+ "gap": "A_scan_agg",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No certified floor is available; zeros denote absent bounds. The dominant scan and aggregation costs are in mutable VDBE and B-tree code. The frozen file format does not freeze decoding implementations. No minimum asynchronous-I/O cost under all admissible caching and batching contexts is supplied. The profiles establish neither an architectural floor nor a specific change guaranteed to close the gap.\"}",
+ "usage": {
+  "input_tokens": 1359,
+  "input_tokens_details": {
+   "cache_write_tokens": 1356,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1356
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 784,
+  "output_tokens_details": {
+   "reasoning_tokens": 681
+  },
+  "total_tokens": 2143
+ },
+ "finish": "completed",
+ "seconds": 20.2
+}

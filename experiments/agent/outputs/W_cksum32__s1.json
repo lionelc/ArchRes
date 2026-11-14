@@ -1,0 +1,14 @@
+{
+ "gap": "W_cksum32",
+ "seed": 1,
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"fd_read\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI interface enforces sequential file reads via fd_read\",\n      \"least_work\": {\n        \"amount\": 32,\n        \"unit\": \"MiB\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 3.2,\n        \"calling_context\": \"Sequential read of 32 MiB file\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"fd_write\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"WASI interface enforces sequential file writes via fd_write\",\n      \"least_work\": {\n        \"amount\": 32,\n        \"unit\": \"MiB\",\n        \"per_unit_cost_us\": 100,\n        \"total_ms\": 3.2,\n        \"calling_context\": \"Sequential write of 32 MiB file\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 6.4,\n  \"L_delta\": 1.37,\n  \"rationale\": \"The WASI interface enforces sequential reads and writes, and the single-threaded nature of WebAssembly prevents parallelism. The floor is 6.4 ms, which is higher than T_R_upper of 9.59 ms, making the gap architectural.\"\n}",
+ "usage": {
+  "completion_tokens": 343,
+  "prompt_tokens": 901,
+  "total_tokens": 1244,
+  "prompt_tokens_details": {
+   "cached_tokens": 498
+  }
+ },
+ "seconds": 94.6
+}

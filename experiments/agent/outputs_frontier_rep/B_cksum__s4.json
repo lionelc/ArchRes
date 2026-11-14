@@ -1,0 +1,28 @@
+{
+ "gap": "B_cksum",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No component is frozen, so no operator can satisfy C1. Startup overhead and checksum implementation costs are mutable and cannot support an architectural floor. The debug markers do not establish multiple full checksum passes or unavoidable work. The measurements identify no verified change that closes the gap, so fixable is not established either. Numeric zeros are placeholders indicating that no floor or floor delta is asserted.\"}",
+ "usage": {
+  "input_tokens": 792,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 872,
+  "output_tokens_details": {
+   "reasoning_tokens": 766
+  },
+  "total_tokens": 1664
+ },
+ "finish": "completed",
+ "seconds": 24.2
+}

@@ -1,0 +1,28 @@
+{
+ "gap": "A_order_limit",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"The profiles primarily implicate mutable execution, record handling, and sorting code. Neither a mandatory asynchronous-I/O call count nor its minimum cost across admissible caching and batching contexts is established. Thus no frozen-operator floor proves the gap architectural. A bounded top-10 sorter is admissible, but its end-to-end time on all 15 statements is unknown, so fixability is not established. Zero numeric fields denote no certified floor or delta.\"}",
+ "usage": {
+  "input_tokens": 1398,
+  "input_tokens_details": {
+   "cache_write_tokens": 1395,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1395
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 636,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 2034
+ },
+ "finish": "completed",
+ "seconds": 18.1
+}

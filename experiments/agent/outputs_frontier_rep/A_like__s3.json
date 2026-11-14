@@ -1,0 +1,28 @@
+{
+ "gap": "A_like",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"LIKE execution and the VDBE are mutable, so their measured costs cannot enter the floor. Matching scan plans establish neither unavoidable I/O calls nor their minimum cost across admissible caching and batching contexts. Optimizing the dominant LIKE implementation is admissible and promising, but instruction profiles alone do not prove it would close the timing gap. No architectural certificate is available; zero floor/delta fields denote no certified floor.\"\n}",
+ "usage": {
+  "input_tokens": 1372,
+  "input_tokens_details": {
+   "cache_write_tokens": 1369,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1369
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 881,
+  "output_tokens_details": {
+   "reasoning_tokens": 754
+  },
+  "total_tokens": 2253
+ },
+ "finish": "completed",
+ "seconds": 22.7
+}

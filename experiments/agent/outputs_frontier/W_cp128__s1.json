@@ -1,0 +1,28 @@
+{
+ "gap": "W_cp128",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Preview1 rules out GNU\u2019s reflink shortcut, but no context-independent minimum transfer cost is established. The approximately 8 GB/s measurements with 1 MiB buffers are achieved rates, not upper bounds on throughput under every admissible configuration. Default 8 KiB syscall counts are mutable. Consequently, neither an architectural certificate nor a demonstrated gap-closing change follows. Zero-valued floor fields indicate no certified floor.\"}",
+ "usage": {
+  "input_tokens": 919,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 865,
+  "output_tokens_details": {
+   "reasoning_tokens": 751
+  },
+  "total_tokens": 1784
+ },
+ "finish": "completed",
+ "seconds": 21.6
+}

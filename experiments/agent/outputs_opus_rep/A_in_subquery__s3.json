@@ -1,0 +1,35 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 3,
+ "model": "claude-opus-5-5",
+ "thinking_mode": {
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "text": "```json\n{\"class\": \"candidate\",\n \"chokepoint\": [{\"operator\": \"page reads through asynchronous I/O layer (orders table scan plus customers rowid probes)\", \"component\": \"asynchronous I/O layer\", \"frozen\": true,\n                 \"why_every_version_executes_it\": \"SQL semantics require evaluating the price_cents predicate on all 300,000 orders rows. Those rows live in 4,394 table pages. Every page read must pass through the frozen async I/O layer, plus the customers pages that are probed.\",\n                 \"least_work\": {\"amount\": 4519, \"unit\": \"pages\", \"per_unit_cost_us\": 1.5,\n                                \"total_ms\": 6.8, \"calling_context\": \"each page read once via a warm OS cache pread of 4 KB, with an assumed per-page cost of about 1.5 us (not measured); the mutable page cache keeps it resident across the six statements; no re-reads\"},\n                 \"max_cores\": 1}],\n \"floor_ms\": 6.8, \"L_delta\": -2.71,\n \"rationale\": \"The frozen I/O floor (about 7 ms) is far below T_R_upper (102.6 ms), so no architectural certificate exists. The profile cost sits in mutable code: op_column_fetch and Statement::_step. Total instructions are only 1.29x SQLite's. Start-up differs by about 4.5 ms and is mutable. Record decoding and the VDBE are probably improvable, but I cannot name a specific setting proven to close the gap, so this is a candidate.\"}\n```",
+ "thinking": [
+  ""
+ ],
+ "usage": {
+  "input_tokens": 2222,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1118,
+  "output_tokens_details": {
+   "thinking_tokens": 603
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "seconds": 12.5
+}

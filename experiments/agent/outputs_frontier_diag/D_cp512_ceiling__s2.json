@@ -1,0 +1,28 @@
+{
+ "gap": "D_cp512_ceiling",
+ "seed": 2,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"fd_read\",\n      \"component\": \"WASI fd_read\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Copying SRC requires transferring its 512 MiB into linear memory; no admissible clone or file-copy primitive exists.\",\n      \"least_work\": {\n        \"amount\": 536870912,\n        \"unit\": \"bytes\",\n        \"per_unit_cost_us\": 0.000125,\n        \"total_ms\": 67.108864,\n        \"calling_context\": \"Optimal buffering, batching, caching and settings, attaining the stipulated maximum of 8 GB/s.\"\n      },\n      \"max_cores\": 1\n    },\n    {\n      \"operator\": \"fd_write\",\n      \"component\": \"WASI fd_write\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"Creating the independent destination copy requires transferring its 512 MiB out of linear memory through fd_write.\",\n      \"least_work\": {\n        \"amount\": 536870912,\n        \"unit\": \"bytes\",\n        \"per_unit_cost_us\": 0.000125,\n        \"total_ms\": 67.108864,\n        \"calling_context\": \"Optimal buffering, batching, caching and settings, attaining the stipulated maximum of 8 GB/s.\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 67.108864,\n  \"L_delta\": 2.635619,\n  \"rationale\": \"The frozen interface excludes GNU's reflink shortcut and requires both data transfers. The envelope bounds each transfer below by 67.108864 ms. Single-threaded wasip1 limits each operator to one core. The prescribed floor is max(134.217728/4, 67.108864) = 67.108864 ms. Thus ln(L/4.81) = 2.635619 exceeds b = 0.236. Mutable call overhead is excluded.\"\n}",
+ "usage": {
+  "input_tokens": 951,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1182,
+  "output_tokens_details": {
+   "reasoning_tokens": 745
+  },
+  "total_tokens": 2133
+ },
+ "finish": "completed",
+ "seconds": 25.1
+}

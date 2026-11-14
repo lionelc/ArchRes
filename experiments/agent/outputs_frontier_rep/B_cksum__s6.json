@@ -1,0 +1,28 @@
+{
+ "gap": "B_cksum",
+ "seed": 6,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"No component is frozen, so no frozen-operator floor can certify an architectural gap. The startup difference is mutable, and the debug markers do not establish redundant checksum passes or demonstrate a gap-closing change. No specific admissible optimization is shown to meet the band. Zero floor fields indicate that no floor is claimed.\"\n}",
+ "usage": {
+  "input_tokens": 792,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 720,
+  "output_tokens_details": {
+   "reasoning_tokens": 612
+  },
+  "total_tokens": 1512
+ },
+ "finish": "completed",
+ "seconds": 19.5
+}

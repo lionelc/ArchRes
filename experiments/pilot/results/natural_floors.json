@@ -1,0 +1,51 @@
+{
+ "A": {
+  "pages_orders_table": 4390,
+  "pages_orders_day_index": 800,
+  "turso_count_star_ms": 14.002,
+  "turso_startup_ms": 6.913,
+  "layer_least_work_per_page_upper_bound_us": 8.86,
+  "scan_agg_floor_upper_bound_ms": 38.9,
+  "sqlite_scan_agg_ms": 109.1,
+  "per_page_needed_for_certificate_us_band_0.165": 29.3,
+  "per_page_needed_for_certificate_us_matched_null_0.070": 26.7
+ },
+ "B": {
+  "gnu_true": {
+   "binary_bytes": 174456,
+   "relative_relocations": 16,
+   "data_rel_ro_bytes": 88,
+   "minor_faults_median": 66
+  },
+  "uutils_true": {
+   "binary_bytes": 19227904,
+   "relative_relocations": 50833,
+   "data_rel_ro_bytes": 1775168,
+   "minor_faults_median": 486
+  },
+  "startup_ms": {
+   "gnu": [
+    0.9,
+    0.921
+   ],
+   "uutils": [
+    2.147,
+    2.073
+   ]
+  }
+ },
+ "C": {
+  "s0": {
+   "shared_asm_share_of_dav1d_instr": 0.64,
+   "rav1d_asm_instr_over_dav1d": 0.9974
+  },
+  "s3000": {
+   "shared_asm_share_of_dav1d_instr": 0.492,
+   "rav1d_asm_instr_over_dav1d": 0.9913
+  },
+  "s6000": {
+   "shared_asm_share_of_dav1d_instr": 0.445,
+   "rav1d_asm_instr_over_dav1d": 0.9849
+  }
+ }
+}

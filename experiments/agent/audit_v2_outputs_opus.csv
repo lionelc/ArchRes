@@ -1,0 +1,30 @@
+gap,seed,class,operator,component,kind,total_ms,amount,unit,err_i,err_ii,err_iii,err_iv
+A_distinct,2,fixable,async I/O page reads of orders_cust,asynchronous I/O layer,frozen,0.73,730.0,pages,False,True,False,False
+A_in_subquery,1,fixable,page reads through the asynchronous I/O layer (orders table scan plus customers rowid lookups),asynchronous I/O layer,frozen,9.0,4519.0,pages,False,False,False,False
+A_in_subquery,2,candidate,page reads through the asynchronous I/O layer (full scan of orders),asynchronous I/O layer,frozen,8.8,4394.0,pages,False,False,False,False
+A_insert_txn,2,candidate,WAL frame write through the asynchronous I/O layer,asynchronous I/O layer,frozen,0.01,1.0,pages,False,False,False,False
+A_join3_star,1,candidate,"page reads through the asynchronous I/O layer (orders, customers, items B-tree pages)",asynchronous I/O layer,frozen,9.1,4541.0,pages,False,False,False,False
+A_join3_star,2,candidate,"page reads through the asynchronous I/O layer (orders, customers and items B-trees)",asynchronous I/O layer,frozen,6.8,4541.0,pages,False,False,False,False
+A_like,1,fixable,page read through async I/O layer,asynchronous I/O layer,frozen,4.4,4394.0,pages,False,False,False,False
+A_like,2,fixable,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,4.4,4394.0,pages,False,False,False,False
+A_order_limit,1,candidate,async I/O page reads of the orders table,asynchronous I/O layer,frozen,4.4,4394.0,pages,False,False,False,False
+A_order_limit,2,fixable,async I/O page read of orders table,asynchronous I/O layer,frozen,8.8,4394.0,pages,False,False,False,False
+A_point_index,1,candidate,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,0.003,3.0,pages,False,False,False,False
+A_point_rowid,1,candidate,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,2.0,2000.0,pages,False,True,False,False
+A_point_rowid,2,candidate,page reads through the asynchronous I/O layer,asynchronous I/O layer,frozen,1.7,1700.0,pages,False,False,False,False
+A_scan_agg,1,candidate,page reads of orders through the asynchronous I/O layer,asynchronous I/O layer,frozen,8.8,4394.0,pages,False,False,False,False
+A_scan_agg,2,fixable,page reads through the asynchronous I/O layer (orders table B-tree),asynchronous I/O layer,frozen,4.4,4394.0,pages,False,False,False,False
+A_startup,1,fixable,async I/O page read (database header / page 1),asynchronous I/O layer,frozen,0.005,1.0,pages,False,False,False,True
+A_startup,2,fixable,read database header/schema page (page 1) through async I/O layer,asynchronous I/O layer,frozen,0.001,1.0,pages,False,False,False,False
+P_sort_frozen_plant,1,architectural,gapcr_plant constructor busy-wait,preloaded constructor F,frozen,84.284,84284.0,microseconds of wall-clock busy-wait,False,False,False,True
+P_sort_frozen_plant,2,architectural,gapcr_plant constructor busy-wait,preloaded constructor F,frozen,84.284,84284.0,microseconds of wall-time spin,False,True,False,False
+W_cksum32,1,candidate,WASI fd_read of the 32 MiB file into linear memory,WASI fd_read,frozen,4.19,33554432.0,bytes,False,False,False,False
+W_cksum32,2,candidate,WASI fd_read of the 32 MiB file into linear memory,WASI fd_read,frozen,4.19,33554432.0,bytes,False,False,False,False
+W_cp128,1,architectural,WASI fd_read of all SRC bytes into linear memory,WASI fd_read,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp128,1,architectural,WASI fd_write of all bytes to DST from linear memory,WASI fd_write,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp128,2,architectural,fd_read of SRC data into linear memory,WASI fd_read,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp128,2,architectural,fd_write of DST data out of linear memory,WASI fd_write,frozen,16.78,134217728.0,bytes,False,False,False,False
+W_cp512,1,architectural,fd_read of SRC's 512 MiB into linear memory,WASI fd_read,frozen,67.11,536870912.0,bytes,False,False,False,False
+W_cp512,1,architectural,fd_write of 512 MiB from linear memory to DST,WASI fd_write,frozen,67.11,536870912.0,bytes,False,False,False,False
+W_cp512,2,architectural,fd_read of all SRC bytes into linear memory,WASI fd_read,frozen,67.11,536870912.0,bytes,False,False,False,False
+W_cp512,2,architectural,fd_write of all bytes from linear memory to DST,WASI fd_write,frozen,67.11,536870912.0,bytes,False,False,False,False

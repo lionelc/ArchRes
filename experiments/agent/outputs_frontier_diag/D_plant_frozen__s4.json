@@ -1,0 +1,28 @@
+{
+ "gap": "D_plant_frozen",
+ "seed": 4,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"architectural\",\n  \"chokepoint\": [\n    {\n      \"operator\": \"gapcr_plant constructor F\",\n      \"component\": \"preloaded constructor F\",\n      \"frozen\": true,\n      \"why_every_version_executes_it\": \"The contract requires F to run once per invocation with GAPCR_PLANT_US fixed at 84284.\",\n      \"least_work\": {\n        \"amount\": 1,\n        \"unit\": \"calls\",\n        \"per_unit_cost_us\": 84284,\n        \"total_ms\": 84.284,\n        \"calling_context\": \"Single-threaded CLOCK_MONOTONIC wait with the frozen positive delay; batching, caching, buffering, and sorting settings cannot shorten it.\"\n      },\n      \"max_cores\": 1\n    }\n  ],\n  \"floor_ms\": 84.284,\n  \"L_delta\": 0.5322,\n  \"rationale\": \"F alone enforces at least 84.284 ms of serial elapsed time. The prescribed floor is max(84.284/4, 84.284/1) = 84.284 ms. Therefore ln(84.284/49.5) = 0.5322 > 0.236. This certificate counts no mutable sorting or start-up work; even eliminating all such work cannot close the gap.\"\n}",
+ "usage": {
+  "input_tokens": 1012,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 800,
+  "output_tokens_details": {
+   "reasoning_tokens": 511
+  },
+  "total_tokens": 1812
+ },
+ "finish": "completed",
+ "seconds": 22.7
+}

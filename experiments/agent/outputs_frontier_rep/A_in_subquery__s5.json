@@ -1,0 +1,28 @@
+{
+ "gap": "A_in_subquery",
+ "seed": 5,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\n  \"class\": \"candidate\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"No floor is certified; numeric zeros are placeholders. The profile primarily identifies mutable VDBE and record-access costs. No context-minimized cost is supplied for the frozen asynchronous I/O layer, and the file format alone establishes no timing floor. Caching, batching, and execution changes remain admissible. Thus no architectural certificate follows, but no specific change is shown to close the gap either.\"\n}",
+ "usage": {
+  "input_tokens": 1419,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 1416
+  },
+  "output_tokens": 509,
+  "output_tokens_details": {
+   "reasoning_tokens": 386
+  },
+  "total_tokens": 1928
+ },
+ "finish": "completed",
+ "seconds": 14.7
+}

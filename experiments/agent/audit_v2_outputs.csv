@@ -1,0 +1,52 @@
+gap,seed,class,operator,component,kind,total_ms,amount,unit,err_i,err_ii,err_iii,err_iv
+A_distinct,1,architectural,op_hash_distinct,VDBE (bytecode interpreter),mutable,1000.0,1.0,calls,False,False,True,False
+A_distinct,2,architectural,op_hash_distinct,VDBE (bytecode interpreter),mutable,1.0,1.0,call,False,False,True,False
+A_in_subquery,1,architectural,SCAN orders,B-tree code,mutable,4.394,4394.0,pages,False,False,True,False
+A_in_subquery,1,architectural,SEARCH customers USING INTEGER PRIMARY KEY (rowid=?),VDBE (bytecode interpreter),mutable,0.125,125.0,pages,False,False,True,False
+A_in_subquery,2,architectural,SCAN orders,B-tree code,mutable,4.394,4394.0,pages,False,False,True,False
+A_in_subquery,2,architectural,SEARCH customers USING INTEGER PRIMARY KEY,B-tree code,mutable,0.125,125.0,pages,False,False,True,False
+A_insert_txn,1,architectural,op_insert,VDBE (bytecode interpreter),mutable,100.0,1.0,inserts,False,False,True,False
+A_insert_txn,1,architectural,op_make_record,VDBE (bytecode interpreter),mutable,50.0,1.0,records,False,False,True,False
+A_insert_txn,1,architectural,insert,B-tree code,mutable,150.0,1.0,inserts,False,False,True,False
+A_insert_txn,2,architectural,op_insert,VDBE (bytecode interpreter),mutable,0.1,1.0,inserts,False,False,True,False
+A_insert_txn,2,architectural,op_make_record,VDBE (bytecode interpreter),mutable,0.15,1.0,records,False,False,True,False
+A_insert_txn,2,architectural,insert,B-tree code,mutable,0.2,1.0,inserts,False,False,True,False
+A_join3_star,1,architectural,HASH JOIN orders AS o,VDBE (bytecode interpreter),mutable,1000.0,1.0,join,False,False,True,False
+A_join3_star,1,architectural,USE SORTER FOR GROUP BY,VDBE (bytecode interpreter),mutable,1500.0,1.0,group by,False,False,True,False
+A_join3_star,2,architectural,HASH JOIN orders AS o,query planner/optimizer,mutable,1000.0,1.0,join,False,False,True,False
+A_join3_star,2,architectural,SEARCH c USING INTEGER PRIMARY KEY (rowid=?),asynchronous I/O layer,frozen,500.0,1.0,lookup,False,False,False,True
+A_join3_star,2,architectural,SCAN items AS i,query planner/optimizer,mutable,1500.0,1.0,scan,False,False,True,False
+A_join3_star,2,architectural,USE SORTER FOR GROUP BY,query planner/optimizer,mutable,2000.0,1.0,group by,False,False,True,False
+A_like,1,architectural,exec_like,VDBE (bytecode interpreter),mutable,380.0,3800000000.0,instructions,False,False,True,False
+A_like,2,architectural,exec_like,VDBE (bytecode interpreter),mutable,380.0,3800000000.0,instructions,False,False,True,False
+A_order_limit,1,architectural,USE SORTER FOR ORDER BY,query planner/optimizer,mutable,1000.0,10.0,rows,False,False,True,False
+A_order_limit,2,architectural,SCAN orders,query planner/optimizer,mutable,4.394,4394.0,pages,False,False,True,False
+A_order_limit,2,architectural,USE SORTER FOR ORDER BY,VDBE (bytecode interpreter),mutable,1000.0,10.0,rows,False,False,True,False
+A_point_index,1,architectural,SEARCH orders USING COVERING INDEX orders_cust (cust=?),query planner/optimizer,mutable,1.0,1.0,query,False,False,True,False
+A_point_index,1,architectural,mi_heap_malloc_aligned_at,asynchronous I/O layer,frozen,0.5,1.0,allocation,False,False,False,True
+A_point_index,2,architectural,SEARCH orders USING COVERING INDEX orders_cust (cust=?),query planner/optimizer,mutable,1.0,1.0,query,False,False,True,False
+A_point_index,2,architectural,mi_heap_malloc_aligned_at,asynchronous I/O layer,frozen,0.5,1.0,call,False,False,False,True
+A_point_rowid,1,architectural,SEARCH orders USING INTEGER PRIMARY KEY (rowid=?),query planner/optimizer,mutable,0.1,1.0,row,False,False,True,False
+A_point_rowid,2,architectural,SEARCH orders USING INTEGER PRIMARY KEY (rowid=?),query planner/optimizer,mutable,0.1,1.0,row,False,False,True,False
+A_point_rowid,2,architectural,mi_heap_malloc_aligned_at,asynchronous I/O layer,frozen,0.5,1.0,allocation,False,False,False,False
+A_scan_agg,1,architectural,op_agg_step,VDBE (bytecode interpreter),mutable,1000.0,1.0,calls,False,False,True,False
+A_scan_agg,1,architectural,op_column_range_fetch,VDBE (bytecode interpreter),mutable,500.0,1.0,calls,False,False,True,False
+A_scan_agg,2,architectural,op_agg_step,VDBE (bytecode interpreter),mutable,1000.0,1.0,calls,False,False,True,False
+A_scan_agg,2,architectural,op_column_range_fetch,VDBE (bytecode interpreter),mutable,1000.0,1.0,calls,False,False,True,False
+A_startup,1,architectural,startup,command-line shell,mutable,7.0,1.0,calls,False,False,True,False
+A_startup,1,architectural,asynchronous I/O,asynchronous I/O layer,frozen,1.0,1.0,calls,False,False,False,True
+A_startup,2,architectural,startup,process start-up and dynamic loading,mutable,7.1,1.0,calls,False,False,True,False
+P_sort_frozen_plant,1,architectural,gapcr_plant,preloaded constructor F,frozen,84.284,84284.0,microseconds,False,False,False,True
+P_sort_frozen_plant,2,architectural,gapcr_plant,preloaded constructor F,frozen,84.284,84284.0,microseconds,False,False,False,True
+W_cksum32,1,architectural,fd_read,WASI fd_read,frozen,3.2,32.0,MiB,False,False,False,False
+W_cksum32,1,architectural,fd_write,WASI fd_write,frozen,3.2,32.0,MiB,False,True,False,False
+W_cksum32,2,architectural,fd_read,WASI fd_read,frozen,3.2,32.0,MiB,False,False,False,False
+W_cksum32,2,architectural,fd_write,WASI fd_write,frozen,3.2,32.0,MiB,False,True,False,False
+W_cp128,1,architectural,pread64,WASI fd_read,frozen,1638.4,16384.0,calls,False,False,False,True
+W_cp128,1,architectural,pwrite64,WASI fd_write,frozen,1638.4,16384.0,calls,False,False,False,True
+W_cp128,2,architectural,pread64,WASI fd_read,frozen,1638.4,16384.0,calls,False,False,False,True
+W_cp128,2,architectural,pwrite64,WASI fd_write,frozen,1638.4,16384.0,calls,False,False,False,True
+W_cp512,1,architectural,pread64,WASI fd_read,frozen,6553.6,65536.0,calls,False,False,False,True
+W_cp512,1,architectural,pwrite64,WASI fd_write,frozen,6553.6,65536.0,calls,False,False,False,True
+W_cp512,2,architectural,pread64,WASI fd_read,frozen,6553.6,65536.0,calls,False,False,False,True
+W_cp512,2,architectural,pwrite64,WASI fd_write,frozen,6553.6,65536.0,calls,False,False,False,True

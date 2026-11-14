@@ -1,0 +1,3 @@
+#!/bin/sh
+# $KO: SQL prefix file (default /dev/null); $A_DB: database path overriding $1 (for crossing statistics states)
+cat "${KO:-/dev/null}" "$2" | exec /work/pilot/bin/sqlite3-3.50.4 -batch "${A_DB:-$1}.s"

@@ -1,0 +1,28 @@
+{
+ "gap": "B_cat",
+ "seed": 1,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"No component is frozen, so no frozen-operator chokepoint can support an architectural certificate. The measured true startup time is not a lower bound across admissible Rust multicall implementations: linking, startup, dispatch, and I/O can all change. The supplied evidence also does not establish a specific change that would close the gap. No floor is claimed; numeric zeros are placeholders.\"}",
+ "usage": {
+  "input_tokens": 764,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 778,
+  "output_tokens_details": {
+   "reasoning_tokens": 671
+  },
+  "total_tokens": 1542
+ },
+ "finish": "completed",
+ "seconds": 18.6
+}

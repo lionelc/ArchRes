@@ -1,0 +1,14 @@
+{
+ "gap": "B_wc_m",
+ "seed": 1,
+ "text": "{\n  \"class\": \"fixable\",\n  \"chokepoint\": [],\n  \"floor_ms\": 0,\n  \"L_delta\": 0,\n  \"rationale\": \"The gap is fixable as the architecture contract allows changes to uutils' code, dependencies, and build settings. Optimizing the Rust code, reducing overhead, or improving the multicall dispatch can close the performance gap.\"\n}",
+ "usage": {
+  "completion_tokens": 84,
+  "prompt_tokens": 779,
+  "total_tokens": 863,
+  "prompt_tokens_details": {
+   "cached_tokens": 635
+  }
+ },
+ "seconds": 23.0
+}

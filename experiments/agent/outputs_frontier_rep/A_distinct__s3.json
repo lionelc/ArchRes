@@ -1,0 +1,28 @@
+{
+ "gap": "A_distinct",
+ "seed": 3,
+ "model": "gpt-6.1-sol",
+ "mode": [
+  "responses",
+  "high"
+ ],
+ "text": "{\"class\":\"candidate\",\"chokepoint\":[],\"floor_ms\":0,\"L_delta\":0,\"rationale\":\"Hash-based DISTINCT, index traversal, and shell startup are mutable. Ordered-index DISTINCT could eliminate hashing, but no evidence establishes that this change, together with startup optimization, brings the entire four-statement cell below the 5.38 ms target. The startup cell alone currently exceeds that target. No least-cost measurements for mandatory frozen asynchronous I/O are supplied, so an architectural floor cannot be certified.\"}",
+ "usage": {
+  "input_tokens": 1382,
+  "input_tokens_details": {
+   "cache_write_tokens": 1379,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 1379
+   },
+   "cached_tokens": 0
+  },
+  "output_tokens": 1042,
+  "output_tokens_details": {
+   "reasoning_tokens": 932
+  },
+  "total_tokens": 2424
+ },
+ "finish": "completed",
+ "seconds": 35.8
+}
